@@ -12,12 +12,14 @@ namespace VeniceHalloween
     using System.Windows;
     using System.Windows.Media;
     using Microsoft.Kinect;
+    using XamlAnimatedGif;
 
     /// <summary>
     /// Interaction logic for MainWindow
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
+ 
         /// <summary>
         /// Radius of drawn hand circles
         /// </summary>
@@ -219,6 +221,12 @@ namespace VeniceHalloween
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         /// <summary>
         /// Gets the bitmap to display
         /// </summary>
@@ -246,11 +254,22 @@ namespace VeniceHalloween
                 {
                     this.statusText = value;
 
-                    // notify any bound elements that the text has changed
-                    if (this.PropertyChanged != null)
-                    {
-                        this.PropertyChanged(this, new PropertyChangedEventArgs("StatusText"));
-                    }
+                    OnPropertyChanged("StatusText");
+                }
+            }
+        }
+
+        private string gifUrl;
+        public string GifUrl
+        {
+            get { return this.gifUrl;  }
+            set
+            {
+                if ( this.gifUrl != value )
+                {
+                    this.gifUrl = value;
+
+                    OnPropertyChanged("GifUrl");
                 }
             }
         }
@@ -262,9 +281,16 @@ namespace VeniceHalloween
         /// <param name="e">event arguments</param>
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            this.setupImages();
+
             if (this.bodyFrameReader != null)
             {
                 this.bodyFrameReader.FrameArrived += this.Reader_FrameArrived;
+            }
+
+            if (this.gifUrl == null)
+            {
+                this.GifUrl = "http://media.giphy.com/media/nWn6ko2ygIeEU/giphy.gif";
             }
         }
 
@@ -320,7 +346,7 @@ namespace VeniceHalloween
                 using (DrawingContext dc = this.drawingGroup.Open())
                 {
                     // Draw a transparent background to set the render size
-                    dc.DrawRectangle(Brushes.White, null, new Rect(0.0, 0.0, this.displayWidth, this.displayHeight));
+                    //dc.DrawRectangle(Brushes.White, null, new Rect(0.0, 0.0, this.displayWidth, this.displayHeight));
 
                     int penIndex = 0;
                     foreach (Body body in this.bodies)
@@ -364,6 +390,13 @@ namespace VeniceHalloween
             }
         }
 
+        private ImageSource headImage;
+
+        private void setupImages()
+        {
+            this.headImage = (ImageSource)Resources["HeadImage"];
+        }
+
         /// <summary>
         /// Draws a body
         /// </summary>
@@ -373,7 +406,7 @@ namespace VeniceHalloween
         /// <param name="drawingPen">specifies color to draw a specific body</param>
         private void DrawBody(IReadOnlyDictionary<JointType, Joint> joints, IDictionary<JointType, Point> jointPoints, DrawingContext drawingContext, Pen drawingPen)
         {
-            this.DrawImageBetweenJoints((ImageSource)Resources["HeadImage"], joints, jointPoints, JointType.Head, JointType.Neck, drawingContext);
+            this.DrawImageBetweenJoints(this.headImage, joints, jointPoints, JointType.Head, JointType.Neck, drawingContext);
 
             this.DrawImageBetweenJoints((ImageSource)Resources["RightBicepImage"], joints, jointPoints, JointType.ShoulderRight, JointType.ElbowRight, drawingContext);
             this.DrawImageBetweenJoints((ImageSource)Resources["LeftBicepImage"], joints, jointPoints, JointType.ShoulderLeft, JointType.ElbowLeft, drawingContext);
@@ -394,7 +427,6 @@ namespace VeniceHalloween
 
             this.DrawImageBetweenJoints((ImageSource)Resources["RightShinImage"], joints, jointPoints, JointType.KneeLeft, JointType.AnkleLeft, drawingContext);
             this.DrawImageBetweenJoints((ImageSource)Resources["LeftShinImage"], joints, jointPoints, JointType.KneeRight, JointType.AnkleRight, drawingContext);
-
 
 
             bool drawDebug = false;
@@ -575,6 +607,37 @@ namespace VeniceHalloween
             double b = p.Y - q.Y;
             double distance = Math.Sqrt(a * a + b * b);
             return distance;
+        }
+
+        private Animator animator;
+        
+        private void backgroundImage_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (animator != null)
+            {
+                animator.AnimationCompleted -= AnimationCompleted;
+            }
+
+            animator = AnimationBehavior.GetAnimator(backgroundImage);
+            if (animator != null)
+            {
+                animator.AnimationCompleted += AnimationCompleted;
+            }
+        }
+
+        private void AnimationCompleted(object sender, EventArgs e)
+        {
+            if (animator != null)
+            {
+                // Load the next gif in the queue!
+                // TODO
+                
+            }
+        }
+
+        private void backgroundImage_Error(DependencyObject d, AnimationErrorEventArgs e)
+        {
+            MessageBox.Show($"An error occurred ({e.Kind}): {e.Exception}");
         }
     }
 }

@@ -664,7 +664,10 @@ namespace VeniceHalloween
 
         private void backgroundImage_Error(DependencyObject d, AnimationErrorEventArgs e)
         {
-            MessageBox.Show($"An error occurred ({e.Kind}): {e.Exception}");
+            this.iterationCount = 0;
+            this.GifUrl = this.giphyDataSource.GetNextGif();
+
+            System.Diagnostics.Debug.WriteLine($"An error occurred ({e.Kind}): {e.Exception}");
         }
     }
 }

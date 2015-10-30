@@ -8,7 +8,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525"
         Loaded="MainWindow_Loaded"
-        Closing="MainWindow_Closing" WindowStyle="None"  WindowState="Maximized"  Background="Black" Foreground="White">
+        Closing="MainWindow_Closing" 
+        WindowStyle="None"  WindowState="Maximized"  Background="Black" Foreground="White">
     <Window.Resources>
         <SolidColorBrush x:Key="MediumGreyBrush" Color="#ff6e6e6e" />
         <SolidColorBrush x:Key="KinectPurpleBrush" Color="#ff52318f" />

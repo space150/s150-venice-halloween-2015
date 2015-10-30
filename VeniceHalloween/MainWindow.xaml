@@ -6,7 +6,7 @@
         xmlns:gif="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
         xmlns:local="clr-namespace:VeniceHalloween"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525"
+        Title="MainWindow" Height="1280" Width="720"
         Loaded="MainWindow_Loaded"
         Closing="MainWindow_Closing" 
         WindowStyle="None"  WindowState="Maximized"  Background="Black" Foreground="White">

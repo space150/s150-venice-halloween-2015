@@ -37,7 +37,7 @@ namespace VeniceHalloween.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
         public int PlaybackIterations {
             get {
                 return ((int)(this["PlaybackIterations"]));

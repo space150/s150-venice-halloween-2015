@@ -73,26 +73,32 @@ namespace VeniceHalloween
             this.BicepRight = this.getImageSource(type, "right-bicep.png");
             this.BicepLeft = this.getImageSource(type, "left-bicep.png");
             this.BicepScale = 1.0;
+            this.BicepOffset.X = 0;
 
             this.ForearmRight = this.getImageSource(type, "right-forearm.png");
             this.ForearmLeft = this.getImageSource(type, "left-forearm.png");
             this.ForearmScale = 1.0;
+            this.ForearmOffset.X = 0;
 
             this.HandRight = this.getImageSource(type, "right-hand.png");
             this.HandLeft = this.getImageSource(type, "left-hand.png");
             this.HandScale = 1.2;
+            this.HandOffset.X = 0;
 
             this.FemurRight = this.getImageSource(type, "right-femur.png");
             this.FemurLeft = this.getImageSource(type, "left-femur.png");
             this.FemurScale = 1.0;
+            this.FemurOffset.X = 0;
 
             this.ShinRight = this.getImageSource(type, "right-shin.png");
             this.ShinLeft = this.getImageSource(type, "left-shin.png");
             this.ShinScale = 1.0;
+            this.ShinOffset.X = 0;
 
             this.FootRight = this.getImageSource(type, "right-foot.png");
             this.FootLeft = this.getImageSource(type, "left-foot.png");
             this.FootScale = 1.4;
+            this.FootOffset.X = 0;
 
             this.Neck = this.getImageSource(type, "neck.png");
             this.NeckScale = 1.0;
@@ -104,6 +110,7 @@ namespace VeniceHalloween
 
             this.Spine = this.getImageSource(type, "spine.png");
             this.SpineScale = 0.8;
+            this.SpineOffset.X = 0;
 
             this.Pelvis = this.getImageSource(type, "pelvis.png");
             this.PelvisScale = 1.0;

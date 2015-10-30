@@ -120,7 +120,20 @@ namespace VeniceHalloween
         /// </summary>
         private List<Pen> bodyColors;
 
-        private List<Costume> costumes;
+        /// <summary>
+        /// List of costumes, index of costume matches tracked body
+        /// </summary>
+        private List<Costume> bodyCostumes;
+
+        /// <summary>
+        /// List of body states, index of state matches tracked body
+        /// </summary>
+        private List<BodyState> bodyStates;
+
+        /// <summary>
+        /// List of possible weapons
+        /// </summary>
+        private List<Weapon> weapons;
 
         /// <summary>
         /// Current status text to display
@@ -195,14 +208,27 @@ namespace VeniceHalloween
             this.bodyColors.Add(new Pen(Brushes.Indigo, 6));
             this.bodyColors.Add(new Pen(Brushes.Violet, 6));
 
-            this.costumes = new List<Costume>();
+            this.bodyCostumes = new List<Costume>();
 
-            this.costumes.Add(new Costume("skeleton1"));
-            this.costumes.Add(new Costume("skeleton1"));
-            this.costumes.Add(new Costume("skeleton1"));
-            this.costumes.Add(new Costume("skeleton1"));
-            this.costumes.Add(new Costume("skeleton1"));
-            this.costumes.Add(new Costume("skeleton1"));
+            this.bodyCostumes.Add(new Costume("skeleton1"));
+            this.bodyCostumes.Add(new Costume("skeleton1"));
+            this.bodyCostumes.Add(new Costume("skeleton1"));
+            this.bodyCostumes.Add(new Costume("skeleton1"));
+            this.bodyCostumes.Add(new Costume("skeleton1"));
+            this.bodyCostumes.Add(new Costume("skeleton1"));
+
+            this.weapons = new List<Weapon>();
+
+            this.weapons.Add(new Weapon("sword"));
+
+            this.bodyStates = new List<BodyState>();
+
+            this.bodyStates.Add(new BodyState(this.weapons.Count));
+            this.bodyStates.Add(new BodyState(this.weapons.Count));
+            this.bodyStates.Add(new BodyState(this.weapons.Count));
+            this.bodyStates.Add(new BodyState(this.weapons.Count));
+            this.bodyStates.Add(new BodyState(this.weapons.Count));
+            this.bodyStates.Add(new BodyState(this.weapons.Count));
 
             // set IsAvailableChanged event notifier
             this.kinectSensor.IsAvailableChanged += this.Sensor_IsAvailableChanged;
@@ -358,12 +384,14 @@ namespace VeniceHalloween
                     // Draw a transparent background to set the render size
                     dc.DrawRectangle(Brushes.Transparent, null, new Rect(0.0, 0.0, this.displayWidth, this.displayHeight));
 
-                    int penIndex = 0;
-                    int costumeIndex = 0;
+                    int bodyIndex = 0;
                     foreach (Body body in this.bodies)
                     {
-                        Pen drawPen = this.bodyColors[penIndex++];
-                        Costume costume = this.costumes[costumeIndex++];
+                        bodyIndex += 1;
+
+                        Pen drawPen = this.bodyColors[bodyIndex];
+                        Costume costume = this.bodyCostumes[bodyIndex];
+                        BodyState state = this.bodyStates[bodyIndex];
 
                         if (body.IsTracked)
                         {
@@ -388,7 +416,9 @@ namespace VeniceHalloween
                                 jointPoints[jointType] = new Point(depthSpacePoint.X, depthSpacePoint.Y);
                             }
 
-                            this.DrawBody(joints, jointPoints, dc, drawPen, costume);
+                            this.bodyStates[bodyIndex].Update(body.HandLeftConfidence, body.HandLeftState, body.HandRightConfidence, body.HandRightState);
+
+                            this.DrawBody(this.bodyStates[bodyIndex], joints, jointPoints, dc, drawPen, costume);
 
                             this.DrawHand(body.HandLeftState, jointPoints[JointType.HandLeft], dc);
                             this.DrawHand(body.HandRightState, jointPoints[JointType.HandRight], dc);
@@ -405,11 +435,13 @@ namespace VeniceHalloween
         /// <summary>
         /// Draws a body
         /// </summary>
+        /// <param name="bodyState">State of this body (mostly whether it is holding a weapon)</param>
         /// <param name="joints">joints to draw</param>
         /// <param name="jointPoints">translated positions of joints to draw</param>
         /// <param name="drawingContext">drawing context to draw to</param>
         /// <param name="drawingPen">specifies color to draw a specific body</param>
-        private void DrawBody(IReadOnlyDictionary<JointType, Joint> joints, IDictionary<JointType, Point> jointPoints, DrawingContext drawingContext, Pen drawingPen, Costume costume)
+        /// <param name="costume">the costume used to draw this body</param>
+        private void DrawBody(BodyState bodyState, IReadOnlyDictionary<JointType, Joint> joints, IDictionary<JointType, Point> jointPoints, DrawingContext drawingContext, Pen drawingPen, Costume costume)
         {
             this.DrawImageBetweenJoints(costume.Neck, costume.NeckScale, costume.NeckOffset, 
                 joints, jointPoints, JointType.Neck, JointType.SpineShoulder, drawingContext, jointPoints[JointType.SpineShoulder]);
@@ -454,6 +486,20 @@ namespace VeniceHalloween
                 joints, jointPoints, JointType.AnkleLeft, JointType.FootLeft, drawingContext);
             this.DrawImageBetweenJoints(costume.FootRight, costume.FootScale, costume.FootOffset,
                 joints, jointPoints, JointType.AnkleRight, JointType.FootRight, drawingContext);
+
+            // draw weapons if needed
+            if ( bodyState.HasLeftHandWeapon )
+            {
+                Weapon weapon = this.weapons[bodyState.LeftHandWeaponIndex];
+                this.DrawImageBetweenJoints(weapon.ImageLeft, weapon.ScaleLeft, weapon.OffsetLeft,
+                    joints, jointPoints, JointType.HandLeft, JointType.HandTipLeft, drawingContext);
+            }
+            if (bodyState.HasRightHandWeapon)
+            {
+                Weapon weapon = this.weapons[bodyState.RightHandWeaponIndex];
+                this.DrawImageBetweenJoints(weapon.ImageRight, weapon.ScaleRight, weapon.OffsetRight,
+                    joints, jointPoints, JointType.HandRight, JointType.HandTipRight, drawingContext);
+            }
 
             this.DrawDebugBody(joints, jointPoints, drawingContext, drawingPen);
         }

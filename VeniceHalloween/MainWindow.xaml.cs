@@ -120,6 +120,8 @@ namespace VeniceHalloween
         /// </summary>
         private List<Pen> bodyColors;
 
+        private List<Costume> costumes;
+
         /// <summary>
         /// Current status text to display
         /// </summary>
@@ -193,6 +195,15 @@ namespace VeniceHalloween
             this.bodyColors.Add(new Pen(Brushes.Indigo, 6));
             this.bodyColors.Add(new Pen(Brushes.Violet, 6));
 
+            this.costumes = new List<Costume>();
+
+            this.costumes.Add(new Costume("skeleton1"));
+            this.costumes.Add(new Costume("skeleton1"));
+            this.costumes.Add(new Costume("skeleton1"));
+            this.costumes.Add(new Costume("skeleton1"));
+            this.costumes.Add(new Costume("skeleton1"));
+            this.costumes.Add(new Costume("skeleton1"));
+
             // set IsAvailableChanged event notifier
             this.kinectSensor.IsAvailableChanged += this.Sensor_IsAvailableChanged;
 
@@ -211,6 +222,8 @@ namespace VeniceHalloween
 
             // use the window object as the view model in this simple example
             this.DataContext = this;
+
+            this.giphyDataSource = new GiphyDataSource(Properties.Settings.Default.SearchTerm);
 
             // initialize the components (controls) of the window
             this.InitializeComponent();
@@ -259,6 +272,8 @@ namespace VeniceHalloween
             }
         }
 
+        private GiphyDataSource giphyDataSource;
+
         private string gifUrl;
         public string GifUrl
         {
@@ -281,17 +296,12 @@ namespace VeniceHalloween
         /// <param name="e">event arguments</param>
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            this.setupImages();
-
             if (this.bodyFrameReader != null)
             {
                 this.bodyFrameReader.FrameArrived += this.Reader_FrameArrived;
             }
 
-            if (this.gifUrl == null)
-            {
-                this.GifUrl = "http://media.giphy.com/media/nWn6ko2ygIeEU/giphy.gif";
-            }
+            this.setupBackgroundImage();
         }
 
         /// <summary>
@@ -349,9 +359,11 @@ namespace VeniceHalloween
                     //dc.DrawRectangle(Brushes.White, null, new Rect(0.0, 0.0, this.displayWidth, this.displayHeight));
 
                     int penIndex = 0;
+                    int costumeIndex = 0;
                     foreach (Body body in this.bodies)
                     {
                         Pen drawPen = this.bodyColors[penIndex++];
+                        Costume costume = this.costumes[costumeIndex++];
 
                         if (body.IsTracked)
                         {
@@ -376,7 +388,7 @@ namespace VeniceHalloween
                                 jointPoints[jointType] = new Point(depthSpacePoint.X, depthSpacePoint.Y);
                             }
 
-                            this.DrawBody(joints, jointPoints, dc, drawPen);
+                            this.DrawBody(joints, jointPoints, dc, drawPen, costume);
 
                             this.DrawHand(body.HandLeftState, jointPoints[JointType.HandLeft], dc);
                             this.DrawHand(body.HandRightState, jointPoints[JointType.HandRight], dc);
@@ -390,13 +402,6 @@ namespace VeniceHalloween
             }
         }
 
-        private ImageSource headImage;
-
-        private void setupImages()
-        {
-            this.headImage = (ImageSource)Resources["HeadImage"];
-        }
-
         /// <summary>
         /// Draws a body
         /// </summary>
@@ -404,62 +409,31 @@ namespace VeniceHalloween
         /// <param name="jointPoints">translated positions of joints to draw</param>
         /// <param name="drawingContext">drawing context to draw to</param>
         /// <param name="drawingPen">specifies color to draw a specific body</param>
-        private void DrawBody(IReadOnlyDictionary<JointType, Joint> joints, IDictionary<JointType, Point> jointPoints, DrawingContext drawingContext, Pen drawingPen)
+        private void DrawBody(IReadOnlyDictionary<JointType, Joint> joints, IDictionary<JointType, Point> jointPoints, DrawingContext drawingContext, Pen drawingPen, Costume costume)
         {
-            this.DrawImageBetweenJoints(this.headImage, joints, jointPoints, JointType.Head, JointType.Neck, drawingContext);
+            this.DrawImageBetweenJoints(costume.Head, joints, jointPoints, JointType.Head, JointType.SpineShoulder, drawingContext);
 
-            this.DrawImageBetweenJoints((ImageSource)Resources["RightBicepImage"], joints, jointPoints, JointType.ShoulderRight, JointType.ElbowRight, drawingContext);
-            this.DrawImageBetweenJoints((ImageSource)Resources["LeftBicepImage"], joints, jointPoints, JointType.ShoulderLeft, JointType.ElbowLeft, drawingContext);
+            this.DrawImageBetweenJoints(costume.BicepRight, joints, jointPoints, JointType.ShoulderRight, JointType.ElbowRight, drawingContext);
+            this.DrawImageBetweenJoints(costume.BicepLeft, joints, jointPoints, JointType.ShoulderLeft, JointType.ElbowLeft, drawingContext);
 
-            this.DrawImageBetweenJoints((ImageSource)Resources["RightForearmImage"], joints, jointPoints, JointType.ElbowRight, JointType.WristRight, drawingContext);
-            this.DrawImageBetweenJoints((ImageSource)Resources["LeftForearmImage"], joints, jointPoints, JointType.ElbowLeft, JointType.WristLeft, drawingContext);
+            this.DrawImageBetweenJoints(costume.ForearmRight, joints, jointPoints, JointType.ElbowRight, JointType.WristRight, drawingContext);
+            this.DrawImageBetweenJoints(costume.ForearmLeft, joints, jointPoints, JointType.ElbowLeft, JointType.WristLeft, drawingContext);
 
-            this.DrawImageBetweenJoints((ImageSource)Resources["RightHandImage"], joints, jointPoints, JointType.WristRight, JointType.HandTipRight, drawingContext);
-            this.DrawImageBetweenJoints((ImageSource)Resources["LeftHandImage"], joints, jointPoints, JointType.WristLeft, JointType.HandTipLeft, drawingContext);
+            this.DrawImageBetweenJoints(costume.HandRight, joints, jointPoints, JointType.WristRight, JointType.HandTipRight, drawingContext);
+            this.DrawImageBetweenJoints(costume.HandLeft, joints, jointPoints, JointType.WristLeft, JointType.HandTipLeft, drawingContext);
 
-            this.DrawImageBetweenJoints((ImageSource)Resources["NeckImage"], joints, jointPoints, JointType.Neck, JointType.SpineShoulder, drawingContext);
-            this.DrawImageBetweenJoints((ImageSource)Resources["RibcageImage"], joints, jointPoints, JointType.SpineShoulder, JointType.SpineMid, drawingContext);
-            this.DrawImageBetweenJoints((ImageSource)Resources["SpineImage"], joints, jointPoints, JointType.SpineMid, JointType.SpineBase, drawingContext);
-            this.DrawImageBetweenJoints((ImageSource)Resources["PelvisImage"], joints, jointPoints, JointType.HipLeft, JointType.HipRight, drawingContext);
+            this.DrawImageBetweenJoints(costume.Neck, joints, jointPoints, JointType.Neck, JointType.SpineShoulder, drawingContext);
+            this.DrawImageBetweenJoints(costume.Ribcage, joints, jointPoints, JointType.ShoulderLeft, JointType.ShoulderRight, drawingContext);
+            this.DrawImageBetweenJoints(costume.Spine, joints, jointPoints, JointType.SpineMid, JointType.SpineBase, drawingContext);
+            this.DrawImageBetweenJoints(costume.Pelvis, joints, jointPoints, JointType.HipLeft, JointType.HipRight, drawingContext);
 
-            this.DrawImageBetweenJoints((ImageSource)Resources["RightFemurImage"], joints, jointPoints, JointType.HipLeft, JointType.KneeLeft, drawingContext);
-            this.DrawImageBetweenJoints((ImageSource)Resources["LeftFemurImage"], joints, jointPoints, JointType.HipRight, JointType.KneeRight, drawingContext);
+            this.DrawImageBetweenJoints(costume.FemurRight, joints, jointPoints, JointType.HipLeft, JointType.KneeLeft, drawingContext);
+            this.DrawImageBetweenJoints(costume.FemurLeft, joints, jointPoints, JointType.HipRight, JointType.KneeRight, drawingContext);
 
-            this.DrawImageBetweenJoints((ImageSource)Resources["RightShinImage"], joints, jointPoints, JointType.KneeLeft, JointType.AnkleLeft, drawingContext);
-            this.DrawImageBetweenJoints((ImageSource)Resources["LeftShinImage"], joints, jointPoints, JointType.KneeRight, JointType.AnkleRight, drawingContext);
+            this.DrawImageBetweenJoints(costume.ShinRight, joints, jointPoints, JointType.KneeLeft, JointType.AnkleLeft, drawingContext);
+            this.DrawImageBetweenJoints(costume.ShinLeft, joints, jointPoints, JointType.KneeRight, JointType.AnkleRight, drawingContext);
 
-
-            bool drawDebug = false;
-            if (drawDebug)
-            {
-                // Draw the bones
-                foreach (var bone in this.bones)
-                {
-                    this.DrawBone(joints, jointPoints, bone.Item1, bone.Item2, drawingContext, drawingPen);
-                }
-
-                // Draw the joints
-                foreach (JointType jointType in joints.Keys)
-                {
-                    Brush drawBrush = null;
-
-                    TrackingState trackingState = joints[jointType].TrackingState;
-
-                    if (trackingState == TrackingState.Tracked)
-                    {
-                        drawBrush = this.trackedJointBrush;
-                    }
-                    else if (trackingState == TrackingState.Inferred)
-                    {
-                        drawBrush = this.inferredJointBrush;
-                    }
-
-                    if (drawBrush != null)
-                    {
-                        drawingContext.DrawEllipse(drawBrush, null, jointPoints[jointType], JointThickness, JointThickness);
-                    }
-                }
-            }
+            this.DrawDebugBody(joints, jointPoints, drawingContext, drawingPen);
         }
 
         private void DrawImageBetweenJoints(ImageSource image, IReadOnlyDictionary<JointType, Joint> joints, IDictionary<JointType, Point> jointPoints, JointType jointType0, JointType jointType1, DrawingContext drawingContext)
@@ -490,6 +464,40 @@ namespace VeniceHalloween
             drawingContext.DrawImage(image, rr);
             drawingContext.Pop();
             drawingContext.Pop();
+        }
+
+        private void DrawDebugBody(IReadOnlyDictionary<JointType, Joint> joints, IDictionary<JointType, Point> jointPoints, DrawingContext drawingContext, Pen drawingPen)
+        {
+            if (Properties.Settings.Default.DebugDraw)
+            {
+                // Draw the bones
+                foreach (var bone in this.bones)
+                {
+                    this.DrawBone(joints, jointPoints, bone.Item1, bone.Item2, drawingContext, drawingPen);
+                }
+
+                // Draw the joints
+                foreach (JointType jointType in joints.Keys)
+                {
+                    Brush drawBrush = null;
+
+                    TrackingState trackingState = joints[jointType].TrackingState;
+
+                    if (trackingState == TrackingState.Tracked)
+                    {
+                        drawBrush = this.trackedJointBrush;
+                    }
+                    else if (trackingState == TrackingState.Inferred)
+                    {
+                        drawBrush = this.inferredJointBrush;
+                    }
+
+                    if (drawBrush != null)
+                    {
+                        drawingContext.DrawEllipse(drawBrush, null, jointPoints[jointType], JointThickness, JointThickness);
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -531,19 +539,22 @@ namespace VeniceHalloween
         /// <param name="drawingContext">drawing context to draw to</param>
         private void DrawHand(HandState handState, Point handPosition, DrawingContext drawingContext)
         {
-            switch (handState)
+            if (Properties.Settings.Default.DebugDraw)
             {
-                case HandState.Closed:
-                    drawingContext.DrawEllipse(this.handClosedBrush, null, handPosition, HandSize, HandSize);
-                    break;
+                switch (handState)
+                {
+                    case HandState.Closed:
+                        drawingContext.DrawEllipse(this.handClosedBrush, null, handPosition, HandSize, HandSize);
+                        break;
 
-                case HandState.Open:
-                    drawingContext.DrawEllipse(this.handOpenBrush, null, handPosition, HandSize, HandSize);
-                    break;
+                    case HandState.Open:
+                        drawingContext.DrawEllipse(this.handOpenBrush, null, handPosition, HandSize, HandSize);
+                        break;
 
-                case HandState.Lasso:
-                    drawingContext.DrawEllipse(this.handLassoBrush, null, handPosition, HandSize, HandSize);
-                    break;
+                    case HandState.Lasso:
+                        drawingContext.DrawEllipse(this.handLassoBrush, null, handPosition, HandSize, HandSize);
+                        break;
+                }
             }
         }
 
@@ -554,38 +565,41 @@ namespace VeniceHalloween
         /// <param name="drawingContext">drawing context to draw to</param>
         private void DrawClippedEdges(Body body, DrawingContext drawingContext)
         {
-            FrameEdges clippedEdges = body.ClippedEdges;
-
-            if (clippedEdges.HasFlag(FrameEdges.Bottom))
+            if (Properties.Settings.Default.DebugDraw)
             {
-                drawingContext.DrawRectangle(
-                    Brushes.Red,
-                    null,
-                    new Rect(0, this.displayHeight - ClipBoundsThickness, this.displayWidth, ClipBoundsThickness));
-            }
+                FrameEdges clippedEdges = body.ClippedEdges;
 
-            if (clippedEdges.HasFlag(FrameEdges.Top))
-            {
-                drawingContext.DrawRectangle(
-                    Brushes.Red,
-                    null,
-                    new Rect(0, 0, this.displayWidth, ClipBoundsThickness));
-            }
+                if (clippedEdges.HasFlag(FrameEdges.Bottom))
+                {
+                    drawingContext.DrawRectangle(
+                        Brushes.Red,
+                        null,
+                        new Rect(0, this.displayHeight - ClipBoundsThickness, this.displayWidth, ClipBoundsThickness));
+                }
 
-            if (clippedEdges.HasFlag(FrameEdges.Left))
-            {
-                drawingContext.DrawRectangle(
-                    Brushes.Red,
-                    null,
-                    new Rect(0, 0, ClipBoundsThickness, this.displayHeight));
-            }
+                if (clippedEdges.HasFlag(FrameEdges.Top))
+                {
+                    drawingContext.DrawRectangle(
+                        Brushes.Red,
+                        null,
+                        new Rect(0, 0, this.displayWidth, ClipBoundsThickness));
+                }
 
-            if (clippedEdges.HasFlag(FrameEdges.Right))
-            {
-                drawingContext.DrawRectangle(
-                    Brushes.Red,
-                    null,
-                    new Rect(this.displayWidth - ClipBoundsThickness, 0, ClipBoundsThickness, this.displayHeight));
+                if (clippedEdges.HasFlag(FrameEdges.Left))
+                {
+                    drawingContext.DrawRectangle(
+                        Brushes.Red,
+                        null,
+                        new Rect(0, 0, ClipBoundsThickness, this.displayHeight));
+                }
+
+                if (clippedEdges.HasFlag(FrameEdges.Right))
+                {
+                    drawingContext.DrawRectangle(
+                        Brushes.Red,
+                        null,
+                        new Rect(this.displayWidth - ClipBoundsThickness, 0, ClipBoundsThickness, this.displayHeight));
+                }
             }
         }
 
@@ -610,28 +624,41 @@ namespace VeniceHalloween
         }
 
         private Animator animator;
+        private int iterationCount;
+
+        private void setupBackgroundImage()
+        {
+            this.iterationCount = 0;
+            this.GifUrl = this.giphyDataSource.GetNextGif();
+        }
         
         private void backgroundImage_Loaded(object sender, RoutedEventArgs e)
         {
             if (animator != null)
             {
-                animator.AnimationCompleted -= AnimationCompleted;
+                animator.CurrentFrameChanged -= Animator_CurrentFrameChanged;
             }
 
             animator = AnimationBehavior.GetAnimator(backgroundImage);
             if (animator != null)
             {
-                animator.AnimationCompleted += AnimationCompleted;
+                animator.CurrentFrameChanged += Animator_CurrentFrameChanged;
             }
         }
 
-        private void AnimationCompleted(object sender, EventArgs e)
+        private void Animator_CurrentFrameChanged(object sender, EventArgs e)
         {
             if (animator != null)
             {
-                // Load the next gif in the queue!
-                // TODO
-                
+                if (animator.CurrentFrameIndex >= (animator.FrameCount - 1))
+                {
+                    this.iterationCount += 1;
+                    if ( this.iterationCount >= Properties.Settings.Default.PlaybackIterations)
+                    {
+                        this.iterationCount = 0;
+                        this.GifUrl = this.giphyDataSource.GetNextGif();
+                    }
+                }
             }
         }
 

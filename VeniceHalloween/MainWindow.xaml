@@ -8,48 +8,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525"
         Loaded="MainWindow_Loaded"
-        Closing="MainWindow_Closing" WindowStyle="None" WindowState="Maximized">
+        Closing="MainWindow_Closing" WindowStyle="None"  WindowState="Maximized"  Background="Black" Foreground="White">
     <Window.Resources>
         <SolidColorBrush x:Key="MediumGreyBrush" Color="#ff6e6e6e" />
         <SolidColorBrush x:Key="KinectPurpleBrush" Color="#ff52318f" />
         <SolidColorBrush x:Key="KinectBlueBrush" Color="#ff00BCF2" />
-        <BitmapImage x:Key="LeftForearmImage" UriSource="Images/left-forearm.png" />
-        <BitmapImage x:Key="RightForearmImage" UriSource="Images/right-forearm.png" />
-        <BitmapImage x:Key="RightBicepImage" UriSource="Images/right-bicep.png" />
-        <BitmapImage x:Key="LeftBicepImage" UriSource="Images/left-bicep.png" />
-        <BitmapImage x:Key="LeftHandImage" UriSource="Images/left-hand.png" />
-        <BitmapImage x:Key="RightHandImage" UriSource="Images/right-hand.png" />
-        <BitmapImage x:Key="HeadImage" UriSource="Images/head.png" />
-        <BitmapImage x:Key="NeckImage" UriSource="Images/neck.png" />
-        <BitmapImage x:Key="RibcageImage" UriSource="Images/ribcage.png" />
-        <BitmapImage x:Key="SpineImage" UriSource="Images/spine.png" />
-        <BitmapImage x:Key="PelvisImage" UriSource="Images/pelvis.png" />
-        <BitmapImage x:Key="LeftFemurImage" UriSource="Images/left-femur.png" />
-        <BitmapImage x:Key="RightFemurImage" UriSource="Images/right-femur.png" />
-        <BitmapImage x:Key="LeftShinImage" UriSource="Images/left-shin.png" />
-        <BitmapImage x:Key="RightShinImage" UriSource="Images/right-shin.png" />
-        <BitmapImage x:Key="LeftFootImage" UriSource="Images/left-foot.png" />
-        <BitmapImage x:Key="RightFootImage" UriSource="Images/right-foot.png" />
+        <SolidColorBrush x:Key="BackgroundBrush" Color="Black" />
     </Window.Resources>
-    <Grid Margin="10 0 10 0">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
+    <Grid Background="{DynamicResource BackgroundBrush}">
         <Image Name="backgroundImage"
                Stretch="UniformToFill"
                gif:AnimationBehavior.SourceUri="{Binding GifUrl}"
-               gif:AnimationBehavior.RepeatBehavior="Forever"
                gif:AnimationBehavior.AutoStart="True" StretchDirection="UpOnly"
                gif:AnimationBehavior.Loaded="backgroundImage_Loaded"
                gif:AnimationBehavior.Error="backgroundImage_Error"/>
-
         <Viewbox Grid.Row="1" HorizontalAlignment="Center">
             <Image Source="{Binding ImageSource}" Stretch="UniformToFill" />
         </Viewbox>
-
-        <StatusBar Grid.Row="2" HorizontalAlignment="Stretch" Name="statusBar" VerticalAlignment="Bottom" Background="White" Foreground="{StaticResource MediumGreyBrush}">
+        <!--StatusBar Grid.Row="2" HorizontalAlignment="Stretch" Name="statusBar" VerticalAlignment="Bottom" Background="White" Foreground="{StaticResource MediumGreyBrush}">
             <StatusBarItem Content="{Binding StatusText}" />
-        </StatusBar>
+        </-->
     </Grid>
 </Window>

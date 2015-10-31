@@ -23,10 +23,10 @@ namespace VeniceHalloween
             this.Type = type;
             this.ImageLeft = this.getImageSource(type, "left");
             this.ImageRight = this.getImageSource(type, "right");
-            this.OffsetLeft.Y = 100.0;
-            this.OffsetRight.Y = 100.0;
-            this.ScaleLeft = 4.0;
-            this.ScaleRight = 4.0;
+            this.OffsetLeft.Y = 0.0;
+            this.OffsetRight.Y = 0.0;
+            this.ScaleLeft = 0.7;
+            this.ScaleRight = 0.7;
         }
   
         private ImageSource getImageSource(string type, string entry)

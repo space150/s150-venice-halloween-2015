@@ -114,7 +114,7 @@ namespace VeniceHalloween
 
             this.Pelvis = this.getImageSource(type, "pelvis.png");
             this.PelvisScale = 1.0;
-            this.PelvisOffset.Y = 8.0;
+            this.PelvisOffset.Y = 4.0;
         }
 
         private ImageSource getImageSource(string type, string entry)

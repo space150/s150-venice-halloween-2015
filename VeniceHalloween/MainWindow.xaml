@@ -6,7 +6,7 @@
         xmlns:gif="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
         xmlns:local="clr-namespace:VeniceHalloween"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1280" Width="720"
+        Title="MainWindow" Height="768" Width="1024"
         Loaded="MainWindow_Loaded"
         Closing="MainWindow_Closing" 
         WindowStyle="None"  WindowState="Maximized"  Background="Black" Foreground="White">
@@ -18,9 +18,8 @@
     </Window.Resources>
     <Grid Background="{DynamicResource BackgroundBrush}">
         <Image Name="backgroundImage"
-               Stretch="UniformToFill"
                gif:AnimationBehavior.SourceUri="{Binding GifUrl}"
-               gif:AnimationBehavior.AutoStart="True" StretchDirection="UpOnly"
+               gif:AnimationBehavior.AutoStart="True"
                gif:AnimationBehavior.Loaded="backgroundImage_Loaded"
                gif:AnimationBehavior.Error="backgroundImage_Error"/>
         <Viewbox Grid.Row="1" HorizontalAlignment="Center">

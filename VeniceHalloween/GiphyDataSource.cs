@@ -49,12 +49,12 @@ namespace VeniceHalloween
                 string url = string.Format("http://api.giphy.com/v1/gifs/search?q={0}&offset={1}&api_key=dc6zaTOxFJmzC", term, offset);
                 HttpWebRequest request = HttpWebRequest.CreateHttp(url);
                 doWithResponse(request, (response) => {
-                    var body = new StreamReader(response.GetResponseStream()).ReadToEnd();
-                    JObject content = JObject.Parse(body);
-                    System.Diagnostics.Debug.WriteLine(content);
-
                     try
                     {
+                        var body = new StreamReader(response.GetResponseStream()).ReadToEnd();
+                        JObject content = JObject.Parse(body);
+                        System.Diagnostics.Debug.WriteLine(content);
+
                         List<string> newGifs = new List<string>();
                         JArray entries = (JArray)content["data"];
                         for (int i = 0; i < entries.Count; i++)
@@ -64,7 +64,8 @@ namespace VeniceHalloween
                         this.gifs = newGifs;
                         this.requesting = false;
                         this.offset += this.gifs.Count;
-                        if (this.offset >= 300) // put this in here to keep things fresh!
+                        
+                        if (this.offset >= 300)
                             this.offset = 0;
                     }
                     catch (Exception e)
@@ -86,8 +87,15 @@ namespace VeniceHalloween
             {
                 request.BeginGetResponse(new AsyncCallback((iar) =>
                 {
-                    var response = (HttpWebResponse)((HttpWebRequest)iar.AsyncState).EndGetResponse(iar);
-                    responseAction(response);
+                    try
+                    {
+                        var response = (HttpWebResponse)((HttpWebRequest)iar.AsyncState).EndGetResponse(iar);
+                        responseAction(response);
+                    }
+                    catch ( Exception e )
+                    {
+                        System.Diagnostics.Debug.WriteLine(e.Message);
+                    }
                 }), request);
             };
             wrapperAction.BeginInvoke(new AsyncCallback((iar) =>

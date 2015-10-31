@@ -210,12 +210,12 @@ namespace VeniceHalloween
 
             this.bodyCostumes = new List<CostumeBase>();
 
+            this.bodyCostumes.Add(new Dude1Costume());
             this.bodyCostumes.Add(new Chick1Costume());
+            this.bodyCostumes.Add(new Dude2Costume());
+            this.bodyCostumes.Add(new Chick2Costume());
             this.bodyCostumes.Add(new Dude1Costume());
-            this.bodyCostumes.Add(new Dude1Costume());
-            this.bodyCostumes.Add(new Dude1Costume());
-            this.bodyCostumes.Add(new Dude1Costume());
-            this.bodyCostumes.Add(new Dude1Costume());
+            this.bodyCostumes.Add(new Chick1Costume());
 
             this.weapons = new List<Weapon>();
 

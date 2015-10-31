@@ -17,11 +17,42 @@ namespace VeniceHalloween
         }
     }
 
+    public class Dude2Costume : CostumeBase
+    {
+        public Dude2Costume()
+        {
+            base.Setup("dude2");
+
+            this.HeadScale = 2.0;
+            this.HeadOffset.Y = -30.0;
+        }
+    }
+
     public class Chick1Costume : CostumeBase
     {
         public Chick1Costume()
         {
             base.Setup("chick1");
+
+            this.HeadScale = 1.4;
+            this.HeadOffset.Y = -6.0;
+
+            this.RibcageScale = 0.9;
+            this.RibcageOffset.Y = -8.0;
+        }
+    }
+
+    public class Chick2Costume : CostumeBase
+    {
+        public Chick2Costume()
+        {
+            base.Setup("chick2");
+
+            this.HeadScale = 1.4;
+            this.HeadOffset.Y = -6.0;
+
+            this.RibcageScale = 0.9;
+            this.RibcageOffset.Y = -8.0;
         }
     }
 
@@ -122,8 +153,8 @@ namespace VeniceHalloween
             this.FootOffset.X = 0;
 
             this.Neck = this.getImageSource(type, "neck.png");
-            this.NeckScale = 1.0;
-            this.NeckOffset.Y = 5.0;
+            this.NeckScale = 0.8;
+            this.NeckOffset.Y = 10.0;
 
             this.Ribcage = this.getImageSource(type, "ribcage.png");
             this.RibcageScale = 0.8;
@@ -135,7 +166,7 @@ namespace VeniceHalloween
 
             this.Pelvis = this.getImageSource(type, "pelvis.png");
             this.PelvisScale = 1.0;
-            this.PelvisOffset.Y = 4.0;
+            this.PelvisOffset.Y = 0.0;
         }
 
         private ImageSource getImageSource(string type, string entry)

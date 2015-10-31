@@ -9,7 +9,23 @@ using System.Windows.Media;
 
 namespace VeniceHalloween
 {
-    class Costume
+    public class Dude1Costume : CostumeBase
+    {
+        public Dude1Costume()
+        {
+            base.Setup("dude1");
+        }
+    }
+
+    public class Chick1Costume : CostumeBase
+    {
+        public Chick1Costume()
+        {
+            base.Setup("chick1");
+        }
+    }
+
+    public class CostumeBase
     {
         public string Type;
         public ImageSource Head;
@@ -62,7 +78,12 @@ namespace VeniceHalloween
         public double PelvisScale;
         public Point PelvisOffset;
  
-        public Costume(string type)
+        public CostumeBase()
+        {
+            // nothing
+        }
+
+        public void Setup(string type)
         {
             this.Type = type;
 

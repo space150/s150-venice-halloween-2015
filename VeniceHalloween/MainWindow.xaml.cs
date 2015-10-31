@@ -123,7 +123,7 @@ namespace VeniceHalloween
         /// <summary>
         /// List of costumes, index of costume matches tracked body
         /// </summary>
-        private List<Costume> bodyCostumes;
+        private List<CostumeBase> bodyCostumes;
 
         /// <summary>
         /// List of body states, index of state matches tracked body
@@ -208,14 +208,14 @@ namespace VeniceHalloween
             this.bodyColors.Add(new Pen(Brushes.Indigo, 6));
             this.bodyColors.Add(new Pen(Brushes.Violet, 6));
 
-            this.bodyCostumes = new List<Costume>();
+            this.bodyCostumes = new List<CostumeBase>();
 
-            this.bodyCostumes.Add(new Costume("skeleton1"));
-            this.bodyCostumes.Add(new Costume("skeleton1"));
-            this.bodyCostumes.Add(new Costume("skeleton1"));
-            this.bodyCostumes.Add(new Costume("skeleton1"));
-            this.bodyCostumes.Add(new Costume("skeleton1"));
-            this.bodyCostumes.Add(new Costume("skeleton1"));
+            this.bodyCostumes.Add(new Chick1Costume());
+            this.bodyCostumes.Add(new Dude1Costume());
+            this.bodyCostumes.Add(new Dude1Costume());
+            this.bodyCostumes.Add(new Dude1Costume());
+            this.bodyCostumes.Add(new Dude1Costume());
+            this.bodyCostumes.Add(new Dude1Costume());
 
             this.weapons = new List<Weapon>();
 
@@ -394,7 +394,7 @@ namespace VeniceHalloween
                     foreach (Body body in this.bodies)
                     {
                         Pen drawPen = this.bodyColors[bodyIndex];
-                        Costume costume = this.bodyCostumes[bodyIndex];
+                        CostumeBase costume = this.bodyCostumes[bodyIndex];
                         BodyState state = this.bodyStates[bodyIndex];
 
                         if (body.IsTracked)
@@ -446,7 +446,7 @@ namespace VeniceHalloween
         /// <param name="drawingContext">drawing context to draw to</param>
         /// <param name="drawingPen">specifies color to draw a specific body</param>
         /// <param name="costume">the costume used to draw this body</param>
-        private void DrawBody(BodyState bodyState, IReadOnlyDictionary<JointType, Joint> joints, IDictionary<JointType, Point> jointPoints, DrawingContext drawingContext, Pen drawingPen, Costume costume)
+        private void DrawBody(BodyState bodyState, IReadOnlyDictionary<JointType, Joint> joints, IDictionary<JointType, Point> jointPoints, DrawingContext drawingContext, Pen drawingPen, CostumeBase costume)
         {
             this.DrawImageBetweenJoints(costume.Neck, costume.NeckScale, costume.NeckOffset, 0.0f,
                 joints, jointPoints, JointType.Neck, JointType.SpineShoulder, drawingContext, jointPoints[JointType.SpineShoulder]);

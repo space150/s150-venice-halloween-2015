@@ -220,6 +220,12 @@ namespace VeniceHalloween
             this.weapons = new List<Weapon>();
 
             this.weapons.Add(new Weapon("sword"));
+            this.weapons.Add(new Weapon("gun"));
+            this.weapons.Add(new Weapon("molotov"));
+            this.weapons.Add(new Weapon("crowbar"));
+            this.weapons.Add(new Weapon("cat"));
+            this.weapons.Add(new Weapon("lightsaber"));
+            this.weapons.Add(new Weapon("plunger"));
 
             this.bodyStates = new List<BodyState>();
 

@@ -24,7 +24,12 @@ namespace VeniceHalloween
             base.Setup("dude2");
 
             this.HeadScale = 2.0;
-            this.HeadOffset.Y = -30.0;
+            this.HeadOffset.Y = -26.0;
+
+            this.RibcageOffset.Y = -7.0;
+
+            this.PelvisScale = 0.8;
+            this.PelvisOffset.Y = 4.0;
         }
     }
 
@@ -154,7 +159,7 @@ namespace VeniceHalloween
 
             this.Neck = this.getImageSource(type, "neck.png");
             this.NeckScale = 0.8;
-            this.NeckOffset.Y = 10.0;
+            this.NeckOffset.Y = 0.0;
 
             this.Ribcage = this.getImageSource(type, "ribcage.png");
             this.RibcageScale = 0.8;

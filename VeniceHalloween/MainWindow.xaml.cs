@@ -214,7 +214,7 @@ namespace VeniceHalloween
             this.bodyCostumes.Add(new Chick1Costume());
             this.bodyCostumes.Add(new Dude2Costume());
             this.bodyCostumes.Add(new Chick2Costume());
-            this.bodyCostumes.Add(new Dude1Costume());
+            this.bodyCostumes.Add(new Dude2Costume());
             this.bodyCostumes.Add(new Chick1Costume());
 
             this.weapons = new List<Weapon>();
@@ -448,65 +448,72 @@ namespace VeniceHalloween
         /// <param name="costume">the costume used to draw this body</param>
         private void DrawBody(BodyState bodyState, IReadOnlyDictionary<JointType, Joint> joints, IDictionary<JointType, Point> jointPoints, DrawingContext drawingContext, Pen drawingPen, CostumeBase costume)
         {
-            this.DrawImageBetweenJoints(costume.Neck, costume.NeckScale, costume.NeckOffset, 0.0f,
-                joints, jointPoints, JointType.Neck, JointType.SpineShoulder, drawingContext, jointPoints[JointType.SpineShoulder]);
-            this.DrawImageBetweenJoints(costume.Spine, costume.SpineScale, costume.SpineOffset, 0.0f,
-                joints, jointPoints, JointType.SpineMid, JointType.SpineBase, drawingContext);
-
-            double ribcageScale = this.DrawImageBetweenJoints(costume.Ribcage, costume.RibcageScale, costume.RibcageOffset, 0.0f,
-                joints, jointPoints, JointType.ShoulderLeft, JointType.ShoulderRight, drawingContext, jointPoints[JointType.SpineMid]);
-
-            this.DrawImageBetweenJoints(costume.Head, costume.HeadScale, costume.HeadOffset, 0.0f,
-                joints, jointPoints, JointType.Head, JointType.SpineShoulder, drawingContext);
-
-            this.DrawImageBetweenJoints(costume.BicepRight, costume.BicepScale, costume.BicepOffset, 0.0f,
-                joints, jointPoints, JointType.ShoulderRight, JointType.ElbowRight, drawingContext);
-            this.DrawImageBetweenJoints(costume.BicepLeft, costume.BicepScale, costume.BicepOffset, 0.0f,
-                joints, jointPoints, JointType.ShoulderLeft, JointType.ElbowLeft, drawingContext);
-
-            this.DrawImageBetweenJoints(costume.ForearmRight, costume.ForearmScale, costume.ForearmOffset, 0.0f,
-                joints, jointPoints, JointType.ElbowRight, JointType.WristRight, drawingContext);
-            this.DrawImageBetweenJoints(costume.ForearmLeft, costume.ForearmScale, costume.ForearmOffset, 0.0f,
-                joints, jointPoints, JointType.ElbowLeft, JointType.WristLeft, drawingContext);
-
-            this.DrawImageBetweenJoints(costume.HandRight, costume.HandScale, costume.HandOffset, 0.0f,
-                joints, jointPoints, JointType.WristRight, JointType.HandTipRight, drawingContext);
-            this.DrawImageBetweenJoints(costume.HandLeft, costume.HandScale, costume.HandOffset, 0.0f,
-                joints, jointPoints, JointType.WristLeft, JointType.HandTipLeft, drawingContext);
-
-            this.DrawImageBetweenJoints(costume.Pelvis, costume.PelvisScale, costume.PelvisOffset, 0.0f,
-                joints, jointPoints, JointType.HipLeft, JointType.HipRight, drawingContext, ribcageScale);
-
-            this.DrawImageBetweenJoints(costume.FemurRight, costume.FemurScale, costume.FemurOffset, 0.0f,
-                joints, jointPoints, JointType.HipLeft, JointType.KneeLeft, drawingContext);
-            this.DrawImageBetweenJoints(costume.FemurLeft, costume.FemurScale, costume.FemurOffset, 0.0f,
-                joints, jointPoints, JointType.HipRight, JointType.KneeRight, drawingContext);
-
-            this.DrawImageBetweenJoints(costume.ShinRight, costume.ShinScale, costume.ShinOffset, 0.0f,
-                joints, jointPoints, JointType.KneeLeft, JointType.AnkleLeft, drawingContext);
-            this.DrawImageBetweenJoints(costume.ShinLeft, costume.ShinScale, costume.ShinOffset, 0.0f,
-                joints, jointPoints, JointType.KneeRight, JointType.AnkleRight, drawingContext);
-
-            this.DrawImageBetweenJoints(costume.FootLeft, costume.FootScale, costume.FootOffset, 0.0f,
-                joints, jointPoints, JointType.AnkleLeft, JointType.FootLeft, drawingContext);
-            this.DrawImageBetweenJoints(costume.FootRight, costume.FootScale, costume.FootOffset, 0.0f,
-                joints, jointPoints, JointType.AnkleRight, JointType.FootRight, drawingContext);
-
-            // draw weapons if needed
-            if ( bodyState.HasLeftHandWeapon )
+            try
             {
-                Weapon weapon = this.weapons[bodyState.LeftHandWeaponIndex];
-                this.DrawImageBetweenJoints(weapon.ImageLeft, weapon.ScaleLeft, weapon.OffsetLeft, -90.0f,
-                    joints, jointPoints, JointType.HandLeft, JointType.HandTipLeft, drawingContext, jointPoints[JointType.HandLeft], ribcageScale);
-            }
-            if (bodyState.HasRightHandWeapon)
-            {
-                Weapon weapon = this.weapons[bodyState.RightHandWeaponIndex];
-                this.DrawImageBetweenJoints(weapon.ImageRight, weapon.ScaleRight, weapon.OffsetRight, 90.0f,
-                    joints, jointPoints, JointType.HandRight, JointType.HandTipRight, drawingContext, jointPoints[JointType.HandRight], ribcageScale);
-            }
+                this.DrawImageBetweenJoints(costume.Neck, costume.NeckScale, costume.NeckOffset, 0.0f,
+                    joints, jointPoints, JointType.Neck, JointType.SpineShoulder, drawingContext, jointPoints[JointType.SpineShoulder]);
+                this.DrawImageBetweenJoints(costume.Spine, costume.SpineScale, costume.SpineOffset, 0.0f,
+                    joints, jointPoints, JointType.SpineMid, JointType.SpineBase, drawingContext);
 
-            this.DrawDebugBody(joints, jointPoints, drawingContext, drawingPen);
+                double ribcageScale = this.DrawImageBetweenJoints(costume.Ribcage, costume.RibcageScale, costume.RibcageOffset, 0.0f,
+                    joints, jointPoints, JointType.ShoulderLeft, JointType.ShoulderRight, drawingContext, jointPoints[JointType.SpineMid]);
+
+                this.DrawImageBetweenJoints(costume.Head, costume.HeadScale, costume.HeadOffset, 0.0f,
+                    joints, jointPoints, JointType.Head, JointType.SpineShoulder, drawingContext);
+
+                this.DrawImageBetweenJoints(costume.BicepRight, costume.BicepScale, costume.BicepOffset, 0.0f,
+                    joints, jointPoints, JointType.ShoulderRight, JointType.ElbowRight, drawingContext);
+                this.DrawImageBetweenJoints(costume.BicepLeft, costume.BicepScale, costume.BicepOffset, 0.0f,
+                    joints, jointPoints, JointType.ShoulderLeft, JointType.ElbowLeft, drawingContext);
+
+                this.DrawImageBetweenJoints(costume.ForearmRight, costume.ForearmScale, costume.ForearmOffset, 0.0f,
+                    joints, jointPoints, JointType.ElbowRight, JointType.WristRight, drawingContext);
+                this.DrawImageBetweenJoints(costume.ForearmLeft, costume.ForearmScale, costume.ForearmOffset, 0.0f,
+                    joints, jointPoints, JointType.ElbowLeft, JointType.WristLeft, drawingContext);
+
+                this.DrawImageBetweenJoints(costume.HandRight, costume.HandScale, costume.HandOffset, 0.0f,
+                    joints, jointPoints, JointType.WristRight, JointType.HandTipRight, drawingContext);
+                this.DrawImageBetweenJoints(costume.HandLeft, costume.HandScale, costume.HandOffset, 0.0f,
+                    joints, jointPoints, JointType.WristLeft, JointType.HandTipLeft, drawingContext);
+
+                this.DrawImageBetweenJoints(costume.Pelvis, costume.PelvisScale, costume.PelvisOffset, 0.0f,
+                    joints, jointPoints, JointType.HipLeft, JointType.HipRight, drawingContext, ribcageScale);
+
+                this.DrawImageBetweenJoints(costume.FemurRight, costume.FemurScale, costume.FemurOffset, 0.0f,
+                    joints, jointPoints, JointType.HipLeft, JointType.KneeLeft, drawingContext);
+                this.DrawImageBetweenJoints(costume.FemurLeft, costume.FemurScale, costume.FemurOffset, 0.0f,
+                    joints, jointPoints, JointType.HipRight, JointType.KneeRight, drawingContext);
+
+                this.DrawImageBetweenJoints(costume.ShinRight, costume.ShinScale, costume.ShinOffset, 0.0f,
+                    joints, jointPoints, JointType.KneeLeft, JointType.AnkleLeft, drawingContext);
+                this.DrawImageBetweenJoints(costume.ShinLeft, costume.ShinScale, costume.ShinOffset, 0.0f,
+                    joints, jointPoints, JointType.KneeRight, JointType.AnkleRight, drawingContext);
+
+                this.DrawImageBetweenJoints(costume.FootLeft, costume.FootScale, costume.FootOffset, 0.0f,
+                    joints, jointPoints, JointType.AnkleLeft, JointType.FootLeft, drawingContext);
+                this.DrawImageBetweenJoints(costume.FootRight, costume.FootScale, costume.FootOffset, 0.0f,
+                    joints, jointPoints, JointType.AnkleRight, JointType.FootRight, drawingContext);
+
+                // draw weapons if needed
+                if (bodyState.HasLeftHandWeapon)
+                {
+                    Weapon weapon = this.weapons[bodyState.LeftHandWeaponIndex];
+                    this.DrawImageBetweenJoints(weapon.ImageLeft, weapon.ScaleLeft, weapon.OffsetLeft, -90.0f,
+                        joints, jointPoints, JointType.HandLeft, JointType.HandTipLeft, drawingContext, jointPoints[JointType.HandLeft], ribcageScale);
+                }
+                if (bodyState.HasRightHandWeapon)
+                {
+                    Weapon weapon = this.weapons[bodyState.RightHandWeaponIndex];
+                    this.DrawImageBetweenJoints(weapon.ImageRight, weapon.ScaleRight, weapon.OffsetRight, 90.0f,
+                        joints, jointPoints, JointType.HandRight, JointType.HandTipRight, drawingContext, jointPoints[JointType.HandRight], ribcageScale);
+                }
+
+                this.DrawDebugBody(joints, jointPoints, drawingContext, drawingPen);
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e.Message);
+            }
         }
 
         private double DrawImageBetweenJoints(ImageSource image, double drawScale, Point centerOffset, double angleOffset, IReadOnlyDictionary<JointType, Joint> joints, IDictionary<JointType, Point> jointPoints, JointType jointType0, JointType jointType1, DrawingContext drawingContext)

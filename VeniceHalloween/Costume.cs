@@ -9,6 +9,46 @@ using System.Windows.Media;
 
 namespace VeniceHalloween
 {
+    public class ElfCostume : CostumeBase
+    {
+        public ElfCostume()
+        {
+            base.Setup("elf");
+        }
+    }
+
+    public class DreidlCostume : CostumeBase
+    {
+        public DreidlCostume()
+        {
+            base.Setup("dreidl");
+        }
+    }
+
+    public class SantaCostume : CostumeBase
+    {
+        public SantaCostume()
+        {
+            base.Setup("santa");
+        }
+    }
+
+    public class BillyCostume : CostumeBase
+    {
+        public BillyCostume()
+        {
+            base.Setup("billy");
+        }
+    }
+
+    public class JesusCostume : CostumeBase
+    {
+        public JesusCostume()
+        {
+            base.Setup("jesus");
+        }
+    }
+
     public class Dude1Costume : CostumeBase
     {
         public Dude1Costume()

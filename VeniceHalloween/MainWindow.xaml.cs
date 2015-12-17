@@ -210,15 +210,25 @@ namespace VeniceHalloween
 
             this.bodyCostumes = new List<CostumeBase>();
 
+            /*
             this.bodyCostumes.Add(new Dude1Costume());
             this.bodyCostumes.Add(new Chick1Costume());
             this.bodyCostumes.Add(new Dude2Costume());
             this.bodyCostumes.Add(new Chick2Costume());
             this.bodyCostumes.Add(new Dude2Costume());
             this.bodyCostumes.Add(new Chick1Costume());
+            */
+
+            this.bodyCostumes.Add(new ElfCostume());
+            this.bodyCostumes.Add(new ElfCostume());
+            this.bodyCostumes.Add(new ElfCostume());
+            this.bodyCostumes.Add(new ElfCostume());
+            this.bodyCostumes.Add(new ElfCostume());
+            this.bodyCostumes.Add(new ElfCostume());
 
             this.weapons = new List<Weapon>();
 
+            /*
             this.weapons.Add(new Weapon("sword"));
             this.weapons.Add(new Weapon("gun"));
             this.weapons.Add(new Weapon("molotov"));
@@ -226,6 +236,14 @@ namespace VeniceHalloween
             this.weapons.Add(new Weapon("cat"));
             this.weapons.Add(new Weapon("lightsaber"));
             this.weapons.Add(new Weapon("plunger"));
+            */
+
+            this.weapons.Add(new Weapon("grenade"));
+            this.weapons.Add(new Weapon("gingerbread"));
+            this.weapons.Add(new Weapon("lightsaber"));
+            this.weapons.Add(new Weapon("puppy"));
+            this.weapons.Add(new Weapon("present"));
+            this.weapons.Add(new Weapon("candycane"));
 
             this.bodyStates = new List<BodyState>();
 
@@ -476,9 +494,6 @@ namespace VeniceHalloween
                 this.DrawImageBetweenJoints(costume.HandLeft, costume.HandScale, costume.HandOffset, 0.0f,
                     joints, jointPoints, JointType.WristLeft, JointType.HandTipLeft, drawingContext);
 
-                this.DrawImageBetweenJoints(costume.Pelvis, costume.PelvisScale, costume.PelvisOffset, 0.0f,
-                    joints, jointPoints, JointType.HipLeft, JointType.HipRight, drawingContext, ribcageScale);
-
                 this.DrawImageBetweenJoints(costume.FemurRight, costume.FemurScale, costume.FemurOffset, 0.0f,
                     joints, jointPoints, JointType.HipLeft, JointType.KneeLeft, drawingContext);
                 this.DrawImageBetweenJoints(costume.FemurLeft, costume.FemurScale, costume.FemurOffset, 0.0f,
@@ -493,6 +508,9 @@ namespace VeniceHalloween
                     joints, jointPoints, JointType.AnkleLeft, JointType.FootLeft, drawingContext);
                 this.DrawImageBetweenJoints(costume.FootRight, costume.FootScale, costume.FootOffset, 0.0f,
                     joints, jointPoints, JointType.AnkleRight, JointType.FootRight, drawingContext);
+
+                this.DrawImageBetweenJoints(costume.Pelvis, costume.PelvisScale, costume.PelvisOffset, 0.0f,
+                    joints, jointPoints, JointType.HipLeft, JointType.HipRight, drawingContext, ribcageScale);
 
                 // draw weapons if needed
                 if (bodyState.HasLeftHandWeapon)

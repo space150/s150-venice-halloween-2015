@@ -9,7 +9,7 @@
       <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="SearchTerm" Type="System.String" Scope="User">
-      <Value Profile="(Default)">halloween</Value>
+      <Value Profile="(Default)">christmas</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -49,7 +49,7 @@ namespace VeniceHalloween.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("halloween")]
+        [global::System.Configuration.DefaultSettingValueAttribute("christmas")]
         public string SearchTerm {
             get {
                 return ((string)(this["SearchTerm"]));

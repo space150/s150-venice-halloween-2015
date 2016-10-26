@@ -1,0 +1,346 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A907936C1DC0033000B8C20C /* StickerPackExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A907936B1DC0033000B8C20C /* StickerPackExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A90793701DC0033000B8C20C /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = A907936F1DC0033000B8C20C /* Stickers.xcstickers */; };
+		A90793711DC0033000B8C20C /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = A907936F1DC0033000B8C20C /* Stickers.xcstickers */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A907936D1DC0033000B8C20C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A90793611DC0032F00B8C20C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A907936A1DC0033000B8C20C;
+			remoteInfo = StickerPackExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A90793771DC0033000B8C20C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A907936C1DC0033000B8C20C /* StickerPackExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A90793671DC0033000B8C20C /* R.I.P.TideStickerPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = R.I.P.TideStickerPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A907936B1DC0033000B8C20C /* StickerPackExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StickerPackExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A907936F1DC0033000B8C20C /* Stickers.xcstickers */ = {isa = PBXFileReference; lastKnownFileType = folder.stickers; name = Stickers.xcstickers; path = StickerPackExtension/Stickers.xcstickers; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		A90793601DC0032F00B8C20C = {
+			isa = PBXGroup;
+			children = (
+				A907936F1DC0033000B8C20C /* Stickers.xcstickers */,
+				A90793681DC0033000B8C20C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A90793681DC0033000B8C20C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A90793671DC0033000B8C20C /* R.I.P.TideStickerPack.app */,
+				A907936B1DC0033000B8C20C /* StickerPackExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A90793661DC0032F00B8C20C /* R.I.P.TideStickerPack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90793781DC0033000B8C20C /* Build configuration list for PBXNativeTarget "R.I.P.TideStickerPack" */;
+			buildPhases = (
+				A90793651DC0032F00B8C20C /* Resources */,
+				A90793771DC0033000B8C20C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A907936E1DC0033000B8C20C /* PBXTargetDependency */,
+			);
+			name = R.I.P.TideStickerPack;
+			productName = R.I.P.TideStickerPack;
+			productReference = A90793671DC0033000B8C20C /* R.I.P.TideStickerPack.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		A907936A1DC0033000B8C20C /* StickerPackExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90793741DC0033000B8C20C /* Build configuration list for PBXNativeTarget "StickerPackExtension" */;
+			buildPhases = (
+				A90793691DC0033000B8C20C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StickerPackExtension;
+			productName = StickerPackExtension;
+			productReference = A907936B1DC0033000B8C20C /* StickerPackExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A90793611DC0032F00B8C20C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Shawn Roske";
+				TargetAttributes = {
+					A90793661DC0032F00B8C20C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = EQ423L3EJS;
+						ProvisioningStyle = Manual;
+					};
+					A907936A1DC0033000B8C20C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = EQ423L3EJS;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = A90793641DC0032F00B8C20C /* Build configuration list for PBXProject "R.I.P.TideStickerPack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A90793601DC0032F00B8C20C;
+			productRefGroup = A90793681DC0033000B8C20C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A90793661DC0032F00B8C20C /* R.I.P.TideStickerPack */,
+				A907936A1DC0033000B8C20C /* StickerPackExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A90793651DC0032F00B8C20C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90793711DC0033000B8C20C /* Stickers.xcstickers in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A90793691DC0033000B8C20C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90793701DC0033000B8C20C /* Stickers.xcstickers in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A907936E1DC0033000B8C20C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A907936A1DC0033000B8C20C /* StickerPackExtension */;
+			targetProxy = A907936D1DC0033000B8C20C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A90793721DC0033000B8C20C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A90793731DC0033000B8C20C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A90793751DC0033000B8C20C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = EQ423L3EJS;
+				INFOPLIST_FILE = StickerPackExtension/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.s150.R-I-P-TideStickerPack.StickerPackExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "38f54d60-458c-4b61-b930-44aee246ebb5";
+				PROVISIONING_PROFILE_SPECIFIER = "space150 RIP Tide StickerPack Extension App Store";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A90793761DC0033000B8C20C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = EQ423L3EJS;
+				INFOPLIST_FILE = StickerPackExtension/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.s150.R-I-P-TideStickerPack.StickerPackExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "38f54d60-458c-4b61-b930-44aee246ebb5";
+				PROVISIONING_PROFILE_SPECIFIER = "space150 RIP Tide StickerPack Extension App Store";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A90793791DC0033000B8C20C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = EQ423L3EJS;
+				INFOPLIST_FILE = R.I.P.TideStickerPack/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.s150.R-I-P-TideStickerPack";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6efe9cdd-5a6e-469a-ad9e-9bba53ba15d0";
+				PROVISIONING_PROFILE_SPECIFIER = "space150 RIP Tide SitckerPack App Store";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A907937A1DC0033000B8C20C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = EQ423L3EJS;
+				INFOPLIST_FILE = R.I.P.TideStickerPack/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.s150.R-I-P-TideStickerPack";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6efe9cdd-5a6e-469a-ad9e-9bba53ba15d0";
+				PROVISIONING_PROFILE_SPECIFIER = "space150 RIP Tide SitckerPack App Store";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A90793641DC0032F00B8C20C /* Build configuration list for PBXProject "R.I.P.TideStickerPack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90793721DC0033000B8C20C /* Debug */,
+				A90793731DC0033000B8C20C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A90793741DC0033000B8C20C /* Build configuration list for PBXNativeTarget "StickerPackExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90793751DC0033000B8C20C /* Debug */,
+				A90793761DC0033000B8C20C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A90793781DC0033000B8C20C /* Build configuration list for PBXNativeTarget "R.I.P.TideStickerPack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90793791DC0033000B8C20C /* Debug */,
+				A907937A1DC0033000B8C20C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A90793611DC0032F00B8C20C /* Project object */;
+}

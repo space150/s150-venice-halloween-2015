@@ -104,8 +104,8 @@ namespace VeniceHalloween
             this.Type = type;
 
             this.Head = this.getImageSource(type, "head.png");
-            this.HeadScale = 1.1;
-            this.HeadOffset.Y = -6.0;
+            this.HeadScale = 1.4;
+            this.HeadOffset.Y = -4.0;
 
             this.BicepRight = this.getImageSource(type, "right-bicep.png");
             this.BicepLeft = this.getImageSource(type, "left-bicep.png");
@@ -142,7 +142,7 @@ namespace VeniceHalloween
             this.NeckOffset.Y = 0.0;
 
             this.Ribcage = this.getImageSource(type, "ribcage.png");
-            this.RibcageScale = 0.8;
+            this.RibcageScale = 1.2;
             this.RibcageOffset.Y = -10.0;
 
             this.Spine = this.getImageSource(type, "spine.png");

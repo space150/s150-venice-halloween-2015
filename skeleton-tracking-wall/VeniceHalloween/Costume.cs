@@ -9,95 +9,35 @@ using System.Windows.Media;
 
 namespace VeniceHalloween
 {
-    public class ElfCostume : CostumeBase
+    public class DemonCostume : CostumeBase
     {
-        public ElfCostume()
+        public DemonCostume()
         {
-            base.Setup("elf");
+            base.Setup("demon");
         }
     }
 
-    public class DreidlCostume : CostumeBase
+    public class GoatCostume : CostumeBase
     {
-        public DreidlCostume()
+        public GoatCostume()
         {
-            base.Setup("dreidl");
+            base.Setup("goat");
         }
     }
 
-    public class SantaCostume : CostumeBase
+    public class KenCostume : CostumeBase
     {
-        public SantaCostume()
+        public KenCostume()
         {
-            base.Setup("santa");
+            base.Setup("ken");
         }
     }
 
-    public class BillyCostume : CostumeBase
+    public class NunCostume : CostumeBase
     {
-        public BillyCostume()
+        public NunCostume()
         {
-            base.Setup("billy");
-        }
-    }
-
-    public class JesusCostume : CostumeBase
-    {
-        public JesusCostume()
-        {
-            base.Setup("jesus");
-        }
-    }
-
-    public class Dude1Costume : CostumeBase
-    {
-        public Dude1Costume()
-        {
-            base.Setup("dude1");
-        }
-    }
-
-    public class Dude2Costume : CostumeBase
-    {
-        public Dude2Costume()
-        {
-            base.Setup("dude2");
-
-            this.HeadScale = 2.0;
-            this.HeadOffset.Y = -26.0;
-
-            this.RibcageOffset.Y = -7.0;
-
-            this.PelvisScale = 0.8;
-            this.PelvisOffset.Y = 4.0;
-        }
-    }
-
-    public class Chick1Costume : CostumeBase
-    {
-        public Chick1Costume()
-        {
-            base.Setup("chick1");
-
-            this.HeadScale = 1.4;
-            this.HeadOffset.Y = -6.0;
-
-            this.RibcageScale = 0.9;
-            this.RibcageOffset.Y = -8.0;
-        }
-    }
-
-    public class Chick2Costume : CostumeBase
-    {
-        public Chick2Costume()
-        {
-            base.Setup("chick2");
-
-            this.HeadScale = 1.4;
-            this.HeadOffset.Y = -6.0;
-
-            this.RibcageScale = 0.9;
-            this.RibcageOffset.Y = -8.0;
+            base.Setup("nun");
         }
     }
 

@@ -209,41 +209,21 @@ namespace VeniceHalloween
             this.bodyColors.Add(new Pen(Brushes.Violet, 6));
 
             this.bodyCostumes = new List<CostumeBase>();
-
-            /*
-            this.bodyCostumes.Add(new Dude1Costume());
-            this.bodyCostumes.Add(new Chick1Costume());
-            this.bodyCostumes.Add(new Dude2Costume());
-            this.bodyCostumes.Add(new Chick2Costume());
-            this.bodyCostumes.Add(new Dude2Costume());
-            this.bodyCostumes.Add(new Chick1Costume());
-            */
-
-            this.bodyCostumes.Add(new ElfCostume());
-            this.bodyCostumes.Add(new ElfCostume());
-            this.bodyCostumes.Add(new ElfCostume());
-            this.bodyCostumes.Add(new ElfCostume());
-            this.bodyCostumes.Add(new ElfCostume());
-            this.bodyCostumes.Add(new ElfCostume());
+            this.bodyCostumes.Add(new DemonCostume());
+            this.bodyCostumes.Add(new GoatCostume());
+            this.bodyCostumes.Add(new KenCostume());
+            this.bodyCostumes.Add(new NunCostume());
+            this.bodyCostumes.Add(new DemonCostume());
+            this.bodyCostumes.Add(new GoatCostume());
 
             this.weapons = new List<Weapon>();
-
-            /*
+            this.weapons.Add(new Weapon("axe"));
+            this.weapons.Add(new Weapon("cross"));
+            this.weapons.Add(new Weapon("goblet"));
+            this.weapons.Add(new Weapon("mic"));
+            this.weapons.Add(new Weapon("pitchfork"));
+            this.weapons.Add(new Weapon("sickle"));
             this.weapons.Add(new Weapon("sword"));
-            this.weapons.Add(new Weapon("gun"));
-            this.weapons.Add(new Weapon("molotov"));
-            this.weapons.Add(new Weapon("crowbar"));
-            this.weapons.Add(new Weapon("cat"));
-            this.weapons.Add(new Weapon("lightsaber"));
-            this.weapons.Add(new Weapon("plunger"));
-            */
-
-            this.weapons.Add(new Weapon("grenade"));
-            this.weapons.Add(new Weapon("gingerbread"));
-            this.weapons.Add(new Weapon("lightsaber"));
-            this.weapons.Add(new Weapon("puppy"));
-            this.weapons.Add(new Weapon("present"));
-            this.weapons.Add(new Weapon("candycane"));
 
             this.bodyStates = new List<BodyState>();
 

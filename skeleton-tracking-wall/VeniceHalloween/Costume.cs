@@ -14,6 +14,12 @@ namespace VeniceHalloween
         public DemonCostume()
         {
             base.Setup("demon");
+
+            this.RibcageScale = 1.15;
+            this.HeadOffset.Y = -16.0;
+            this.PelvisScale = 1.1;
+            this.PelvisOffset.Y = -6.0;
+            this.ForearmScale = 1.2;
         }
     }
 
@@ -22,6 +28,15 @@ namespace VeniceHalloween
         public GoatCostume()
         {
             base.Setup("goat");
+
+            this.HeadScale = 2.2;
+            this.HeadOffset.Y = -14.0;
+            this.PelvisScale = 1.4;
+            this.PelvisOffset.Y = -10.0;
+            this.RibcageScale = 1.25;
+            this.RibcageOffset.Y = -8.0;
+            this.FemurScale = 1.1;
+            this.ShinScale = 1.4;
         }
     }
 
@@ -30,6 +45,16 @@ namespace VeniceHalloween
         public KenCostume()
         {
             base.Setup("ken");
+
+            this.FootScale = 2.0;
+            this.PelvisScale = 1.1;
+            this.PelvisOffset.Y = -6.0;
+            this.RibcageScale = 1.2;
+            this.RibcageOffset.Y = -2.0;
+            this.HandScale = 1.2;
+            this.ForearmScale = 1.2;
+            this.BicepScale = 1.1;
+
         }
     }
 
@@ -38,6 +63,14 @@ namespace VeniceHalloween
         public NunCostume()
         {
             base.Setup("nun");
+
+            this.HeadScale = 1.6;
+            this.HeadOffset.Y = -7.0;
+            this.RibcageOffset.Y = -6.0;
+            this.PelvisScale = 1.2;
+            this.PelvisOffset.Y = -6.0;
+            this.ForearmScale = 1.2;
+            this.BicepScale = 1.1;
         }
     }
 
@@ -105,7 +138,7 @@ namespace VeniceHalloween
 
             this.Head = this.getImageSource(type, "head.png");
             this.HeadScale = 1.4;
-            this.HeadOffset.Y = -4.0;
+            this.HeadOffset.Y = -6.0;
 
             this.BicepRight = this.getImageSource(type, "right-bicep.png");
             this.BicepLeft = this.getImageSource(type, "left-bicep.png");
@@ -119,17 +152,17 @@ namespace VeniceHalloween
 
             this.HandRight = this.getImageSource(type, "right-hand.png");
             this.HandLeft = this.getImageSource(type, "left-hand.png");
-            this.HandScale = 1.2;
+            this.HandScale = 1.6;
             this.HandOffset.X = 0;
 
             this.FemurRight = this.getImageSource(type, "right-femur.png");
             this.FemurLeft = this.getImageSource(type, "left-femur.png");
-            this.FemurScale = 1.0;
+            this.FemurScale = 1.2;
             this.FemurOffset.X = 0;
 
             this.ShinRight = this.getImageSource(type, "right-shin.png");
             this.ShinLeft = this.getImageSource(type, "left-shin.png");
-            this.ShinScale = 1.0;
+            this.ShinScale = 1.2;
             this.ShinOffset.X = 0;
 
             this.FootRight = this.getImageSource(type, "right-foot.png");

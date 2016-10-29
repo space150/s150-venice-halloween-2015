@@ -209,12 +209,12 @@ namespace VeniceHalloween
             this.bodyColors.Add(new Pen(Brushes.Violet, 6));
 
             this.bodyCostumes = new List<CostumeBase>();
-            this.bodyCostumes.Add(new DemonCostume());
             this.bodyCostumes.Add(new GoatCostume());
             this.bodyCostumes.Add(new KenCostume());
             this.bodyCostumes.Add(new NunCostume());
             this.bodyCostumes.Add(new DemonCostume());
             this.bodyCostumes.Add(new GoatCostume());
+            this.bodyCostumes.Add(new DemonCostume());
 
             this.weapons = new List<Weapon>();
             this.weapons.Add(new Weapon("axe"));
@@ -253,7 +253,7 @@ namespace VeniceHalloween
             // use the window object as the view model in this simple example
             this.DataContext = this;
 
-            this.giphyDataSource = new GiphyDataSource(Properties.Settings.Default.SearchTerm);
+            this.backgroundDataSource = new BackgroundDataSource();
 
             // initialize the components (controls) of the window
             this.InitializeComponent();
@@ -302,19 +302,19 @@ namespace VeniceHalloween
             }
         }
 
-        private GiphyDataSource giphyDataSource;
+        private BackgroundDataSource backgroundDataSource;
 
-        private string gifUrl;
-        public string GifUrl
+        private string videoPath;
+        public string VideoPath
         {
-            get { return this.gifUrl;  }
+            get { return this.videoPath;  }
             set
             {
-                if ( this.gifUrl != value )
+                if ( this.videoPath != value )
                 {
-                    this.gifUrl = value;
+                    this.videoPath = value;
 
-                    OnPropertyChanged("GifUrl");
+                    OnPropertyChanged("VideoPath");
                 }
             }
         }
@@ -469,28 +469,28 @@ namespace VeniceHalloween
                 this.DrawImageBetweenJoints(costume.ForearmLeft, costume.ForearmScale, costume.ForearmOffset, 0.0f,
                     joints, jointPoints, JointType.ElbowLeft, JointType.WristLeft, drawingContext);
 
-                this.DrawImageBetweenJoints(costume.HandRight, costume.HandScale, costume.HandOffset, 0.0f,
-                    joints, jointPoints, JointType.WristRight, JointType.HandTipRight, drawingContext);
-                this.DrawImageBetweenJoints(costume.HandLeft, costume.HandScale, costume.HandOffset, 0.0f,
-                    joints, jointPoints, JointType.WristLeft, JointType.HandTipLeft, drawingContext);
-
-                this.DrawImageBetweenJoints(costume.FemurRight, costume.FemurScale, costume.FemurOffset, 0.0f,
-                    joints, jointPoints, JointType.HipLeft, JointType.KneeLeft, drawingContext);
-                this.DrawImageBetweenJoints(costume.FemurLeft, costume.FemurScale, costume.FemurOffset, 0.0f,
-                    joints, jointPoints, JointType.HipRight, JointType.KneeRight, drawingContext);
+                this.DrawImageBetweenJoints(costume.FootLeft, costume.FootScale, costume.FootOffset, 0.0f,
+                    joints, jointPoints, JointType.AnkleLeft, JointType.FootLeft, drawingContext);
+                this.DrawImageBetweenJoints(costume.FootRight, costume.FootScale, costume.FootOffset, 0.0f,
+                    joints, jointPoints, JointType.AnkleRight, JointType.FootRight, drawingContext);
 
                 this.DrawImageBetweenJoints(costume.ShinRight, costume.ShinScale, costume.ShinOffset, 0.0f,
                     joints, jointPoints, JointType.KneeLeft, JointType.AnkleLeft, drawingContext);
                 this.DrawImageBetweenJoints(costume.ShinLeft, costume.ShinScale, costume.ShinOffset, 0.0f,
                     joints, jointPoints, JointType.KneeRight, JointType.AnkleRight, drawingContext);
 
-                this.DrawImageBetweenJoints(costume.FootLeft, costume.FootScale, costume.FootOffset, 0.0f,
-                    joints, jointPoints, JointType.AnkleLeft, JointType.FootLeft, drawingContext);
-                this.DrawImageBetweenJoints(costume.FootRight, costume.FootScale, costume.FootOffset, 0.0f,
-                    joints, jointPoints, JointType.AnkleRight, JointType.FootRight, drawingContext);
+                this.DrawImageBetweenJoints(costume.FemurRight, costume.FemurScale, costume.FemurOffset, 0.0f,
+                    joints, jointPoints, JointType.HipLeft, JointType.KneeLeft, drawingContext);
+                this.DrawImageBetweenJoints(costume.FemurLeft, costume.FemurScale, costume.FemurOffset, 0.0f,
+                    joints, jointPoints, JointType.HipRight, JointType.KneeRight, drawingContext);
 
                 this.DrawImageBetweenJoints(costume.Pelvis, costume.PelvisScale, costume.PelvisOffset, 0.0f,
                     joints, jointPoints, JointType.HipLeft, JointType.HipRight, drawingContext, ribcageScale);
+
+                this.DrawImageBetweenJoints(costume.HandRight, costume.HandScale, costume.HandOffset, 0.0f,
+                    joints, jointPoints, JointType.WristRight, JointType.HandTipRight, drawingContext);
+                this.DrawImageBetweenJoints(costume.HandLeft, costume.HandScale, costume.HandOffset, 0.0f,
+                    joints, jointPoints, JointType.WristLeft, JointType.HandTipLeft, drawingContext);
 
                 // draw weapons if needed
                 if (bodyState.HasLeftHandWeapon)
@@ -757,52 +757,20 @@ namespace VeniceHalloween
             double distance = Math.Sqrt(a * a + b * b);
             return distance;
         }
-
-        private Animator animator;
-        private int iterationCount;
-
+       
         private void setupBackgroundImage()
         {
-            this.iterationCount = 0;
-            this.GifUrl = this.giphyDataSource.GetNextGif();
-        }
-        
-        private void backgroundImage_Loaded(object sender, RoutedEventArgs e)
-        {
-            if (animator != null)
-            {
-                animator.CurrentFrameChanged -= Animator_CurrentFrameChanged;
-            }
-
-            animator = AnimationBehavior.GetAnimator(backgroundImage);
-            if (animator != null)
-            {
-                animator.CurrentFrameChanged += Animator_CurrentFrameChanged;
-            }
+            this.VideoPath = this.backgroundDataSource.GetNextVideoPath();
         }
 
-        private void Animator_CurrentFrameChanged(object sender, EventArgs e)
+        private void backgroundVideo_MediaEnded(object sender, RoutedEventArgs e)
         {
-            if (animator != null)
-            {
-                if (animator.CurrentFrameIndex >= (animator.FrameCount - 1))
-                {
-                    this.iterationCount += 1;
-                    if ( this.iterationCount >= Properties.Settings.Default.PlaybackIterations)
-                    {
-                        this.iterationCount = 0;
-                        this.GifUrl = this.giphyDataSource.GetNextGif();
-                    }
-                }
-            }
+            this.VideoPath = this.backgroundDataSource.GetNextVideoPath();
         }
 
-        private void backgroundImage_Error(DependencyObject d, AnimationErrorEventArgs e)
+        private void backgroundVideo_MediaFailed(object sender, ExceptionRoutedEventArgs e)
         {
-            this.iterationCount = 0;
-            this.GifUrl = this.giphyDataSource.GetNextGif();
-
-            System.Diagnostics.Debug.WriteLine($"An error occurred ({e.Kind}): {e.Exception}");
+            this.VideoPath = this.backgroundDataSource.GetNextVideoPath();
         }
     }
 }

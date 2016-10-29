@@ -9,24 +9,17 @@
         Title="MainWindow" Height="768" Width="1024"
         Loaded="MainWindow_Loaded"
         Closing="MainWindow_Closing" 
-        WindowStyle="None"  WindowState="Normal"  Background="Black" Foreground="White">
+        WindowStyle="None"  WindowState="Maximized"  Background="Black" Foreground="White">
     <Window.Resources>
         <SolidColorBrush x:Key="MediumGreyBrush" Color="#ff6e6e6e" />
         <SolidColorBrush x:Key="KinectPurpleBrush" Color="#ff52318f" />
         <SolidColorBrush x:Key="KinectBlueBrush" Color="#ff00BCF2" />
         <SolidColorBrush x:Key="BackgroundBrush" Color="Black" />
     </Window.Resources>
-    <Grid Background="{DynamicResource BackgroundBrush}">
-        <Image Name="backgroundImage"
-               gif:AnimationBehavior.SourceUri="{Binding GifUrl}"
-               gif:AnimationBehavior.AutoStart="True"
-               gif:AnimationBehavior.Loaded="backgroundImage_Loaded"
-               gif:AnimationBehavior.Error="backgroundImage_Error"/>
+    <Grid>
+        <MediaElement Source="{Binding VideoPath}" Name="backgroundVideo" MediaEnded="backgroundVideo_MediaEnded" MediaFailed="backgroundVideo_MediaFailed" />
         <Viewbox Grid.Row="1" HorizontalAlignment="Center">
             <Image Source="{Binding ImageSource}" Stretch="UniformToFill" />
         </Viewbox>
-        <!--StatusBar Grid.Row="2" HorizontalAlignment="Stretch" Name="statusBar" VerticalAlignment="Bottom" Background="White" Foreground="{StaticResource MediumGreyBrush}">
-            <StatusBarItem Content="{Binding StatusText}" />
-        </-->
     </Grid>
 </Window>

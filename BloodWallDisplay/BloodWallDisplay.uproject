@@ -1,0 +1,13 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{1968E8D3-448A-0BEF-35C1-F897B6C3B670}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "BloodWallDisplay",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}

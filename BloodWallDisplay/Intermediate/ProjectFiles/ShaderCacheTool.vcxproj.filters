@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Mac\ShaderCacheTool\ShaderCacheTool.Target.cs" />
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Mac\ShaderCacheTool\ShaderCacheTool.Build.cs" />
+		<Filter Include="Private">
+			<UniqueIdentifier>{112CB2B8-C417-4D6B-ABEC-92EA536B29D3}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Mac\ShaderCacheTool\Private\ShaderCacheTool.cpp">
+			<Filter>Private</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Mac\ShaderCacheTool\Private\ShaderCacheTool.h">
+			<Filter>Private</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>

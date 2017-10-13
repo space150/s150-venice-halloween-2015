@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\BuildPatchTool.Target.cs" />
+		<Filter Include="Config">
+			<UniqueIdentifier>{00BFBEEE-CCDA-493A-A9F0-1C3497ADF89C}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Programs\BuildPatchTool\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\BuildPatchTool.Automation.cs" />
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\BuildPatchTool.Build.cs" />
+		<Filter Include="Private">
+			<UniqueIdentifier>{6227A17E-2CC0-44E7-935E-3BAFA07739A9}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Private\BuildPatchTool.cpp">
+			<Filter>Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Private\ToolMode.cpp">
+			<Filter>Private</Filter>
+		</ClCompile >
+		<Filter Include="Private\ToolModes">
+			<UniqueIdentifier>{0B810AFE-D028-4A68-A840-79EDB3C2F878}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Private\ToolModes\CompactifyMode.cpp">
+			<Filter>Private\ToolModes</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Private\ToolModes\DiffManifestMode.cpp">
+			<Filter>Private\ToolModes</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Private\ToolModes\EnumerationMode.cpp">
+			<Filter>Private\ToolModes</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Private\ToolModes\MergeManifestMode.cpp">
+			<Filter>Private\ToolModes</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Private\ToolModes\PatchGenerationMode.cpp">
+			<Filter>Private\ToolModes</Filter>
+		</ClCompile >
+		<Filter Include="Public">
+			<UniqueIdentifier>{BF95BF58-D96A-4824-81DB-FEBBB63CEE3F}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Public\BuildPatchTool.h">
+			<Filter>Public</Filter>
+		</ClInclude >
+		<Filter Include="Public\Interfaces">
+			<UniqueIdentifier>{28C27B97-86B1-459A-9EF3-8639FE9718B1}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Public\Interfaces\ToolMode.h">
+			<Filter>Public\Interfaces</Filter>
+		</ClInclude >
+		<Filter Include="Public\ToolModes">
+			<UniqueIdentifier>{A0EA2CA8-1FFE-4247-B995-F1A5588A231D}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Public\ToolModes\CompactifyMode.h">
+			<Filter>Public\ToolModes</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Public\ToolModes\DiffManifestMode.h">
+			<Filter>Public\ToolModes</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Public\ToolModes\EnumerationMode.h">
+			<Filter>Public\ToolModes</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Public\ToolModes\MergeManifestMode.h">
+			<Filter>Public\ToolModes</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Public\ToolModes\PatchGenerationMode.h">
+			<Filter>Public\ToolModes</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\BloodWallDisplay.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{EEC76A8B-EA9E-4E15-B37C-9E0565C95341}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\BloodWallDisplay.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\BloodWallDisplayEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{C1044E66-3BC5-401F-8F1C-18038CD0825F}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\BloodWallDisplay">
+			<UniqueIdentifier>{49D85487-0779-4F2E-95E5-2EC71541E24D}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\BloodWallDisplay\BloodWallDisplay.Build.cs">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\BloodWallDisplay\BloodWallDisplay.cpp">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BloodWallDisplay\BloodWallDisplay.h">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\BloodWallDisplay\BloodWallDisplayGameModeBase.cpp">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BloodWallDisplay\BloodWallDisplayGameModeBase.h">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>

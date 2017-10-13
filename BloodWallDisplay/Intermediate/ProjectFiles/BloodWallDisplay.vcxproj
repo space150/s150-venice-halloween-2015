@@ -1,0 +1,971 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug_Game|Win32">
+			<Configuration>Debug_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug_Game|x64">
+			<Configuration>Debug_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug_Editor|Win32">
+			<Configuration>Debug_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug_Editor|x64">
+			<Configuration>Debug_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Debug_Game|Win32">
+			<Configuration>Mac_Debug_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Debug_Game|x64">
+			<Configuration>Mac_Debug_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Debug_Editor|Win32">
+			<Configuration>Mac_Debug_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Debug_Editor|x64">
+			<Configuration>Mac_Debug_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Debug_Game|Win32">
+			<Configuration>HTML5_Debug_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Debug_Game|x64">
+			<Configuration>HTML5_Debug_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Debug_Editor|Win32">
+			<Configuration>HTML5_Debug_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Debug_Editor|x64">
+			<Configuration>HTML5_Debug_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="DebugGame_Game|Win32">
+			<Configuration>DebugGame_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="DebugGame_Game|x64">
+			<Configuration>DebugGame_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="DebugGame_Editor|Win32">
+			<Configuration>DebugGame_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="DebugGame_Editor|x64">
+			<Configuration>DebugGame_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_DebugGame_Game|Win32">
+			<Configuration>Mac_DebugGame_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_DebugGame_Game|x64">
+			<Configuration>Mac_DebugGame_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_DebugGame_Editor|Win32">
+			<Configuration>Mac_DebugGame_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_DebugGame_Editor|x64">
+			<Configuration>Mac_DebugGame_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_DebugGame_Game|Win32">
+			<Configuration>HTML5_DebugGame_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_DebugGame_Game|x64">
+			<Configuration>HTML5_DebugGame_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_DebugGame_Editor|Win32">
+			<Configuration>HTML5_DebugGame_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_DebugGame_Editor|x64">
+			<Configuration>HTML5_DebugGame_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Development_Game|Win32">
+			<Configuration>Development_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Development_Game|x64">
+			<Configuration>Development_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Development_Editor|Win32">
+			<Configuration>Development_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Development_Editor|x64">
+			<Configuration>Development_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Development_Game|Win32">
+			<Configuration>Mac_Development_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Development_Game|x64">
+			<Configuration>Mac_Development_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Development_Editor|Win32">
+			<Configuration>Mac_Development_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Development_Editor|x64">
+			<Configuration>Mac_Development_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Development_Game|Win32">
+			<Configuration>HTML5_Development_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Development_Game|x64">
+			<Configuration>HTML5_Development_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Development_Editor|Win32">
+			<Configuration>HTML5_Development_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Development_Editor|x64">
+			<Configuration>HTML5_Development_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Shipping_Game|Win32">
+			<Configuration>Shipping_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Shipping_Game|x64">
+			<Configuration>Shipping_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Shipping_Game|Win32">
+			<Configuration>Mac_Shipping_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Shipping_Game|x64">
+			<Configuration>Mac_Shipping_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Shipping_Game|Win32">
+			<Configuration>HTML5_Shipping_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Shipping_Game|x64">
+			<Configuration>HTML5_Shipping_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Test_Game|Win32">
+			<Configuration>Test_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Test_Game|x64">
+			<Configuration>Test_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Test_Game|Win32">
+			<Configuration>Mac_Test_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Test_Game|x64">
+			<Configuration>Mac_Test_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Test_Game|Win32">
+			<Configuration>HTML5_Test_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Test_Game|x64">
+			<Configuration>HTML5_Test_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{162982F0-755F-4D2F-BDEF-BA99F756E5AC}</ProjectGuid>
+		<Keyword>MakeFileProj</Keyword>
+		<RootNamespace>BloodWallDisplay</RootNamespace>
+       <PlatformToolset>v141</PlatformToolset>
+       <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+       <TargetRuntime>Native</TargetRuntime>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Editor|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Editor|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Editor|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_DebugGame_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_DebugGame_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_DebugGame_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_DebugGame_Editor|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Editor|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Editor|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Editor|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Test_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Test_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Test_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Test_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings" />
+	<PropertyGroup Label="UserMacros" />
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Win32 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Win32 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Win32 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win32\BloodWallDisplay-Win32-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplayEditor Win32 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplayEditor Win32 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplayEditor Win32 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Win32\UE4Editor-Win32-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Game|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Game|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Win64 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Win64 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Win64 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win64\BloodWallDisplay-Win64-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Editor|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Editor|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplayEditor Win64 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplayEditor Win64 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplayEditor Win64 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Win64\UE4Editor-Win64-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Mac Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Mac Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Mac Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Mac\BloodWallDisplay-Mac-Debug</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplayEditor Mac Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplayEditor Mac Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplayEditor Mac Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Mac\UE4Editor-Mac-Debug</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay HTML5 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay HTML5 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay HTML5 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\HTML5\BloodWallDisplay-HTML5-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplayEditor HTML5 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplayEditor HTML5 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplayEditor HTML5 Debug "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\HTML5\BloodWallDisplayEditor-HTML5-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win32\BloodWallDisplay-Win32-DebugGame.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplayEditor Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplayEditor Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplayEditor Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Win32\UE4Editor.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win64\BloodWallDisplay-Win64-DebugGame.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplayEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplayEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplayEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Win64\UE4Editor.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_DebugGame_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_DebugGame_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Mac DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Mac DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Mac DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Mac\BloodWallDisplay-Mac-DebugGame</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_DebugGame_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_DebugGame_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplayEditor Mac DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplayEditor Mac DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplayEditor Mac DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Mac\UE4Editor</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay HTML5 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay HTML5 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay HTML5 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\HTML5\BloodWallDisplay-HTML5-DebugGame.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplayEditor HTML5 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplayEditor HTML5 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplayEditor HTML5 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\HTML5\BloodWallDisplayEditor-HTML5-DebugGame.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Win32 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Win32 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Win32 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win32\BloodWallDisplay.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplayEditor Win32 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplayEditor Win32 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplayEditor Win32 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Win32\UE4Editor.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Win64 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Win64 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Win64 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win64\BloodWallDisplay.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplayEditor Win64 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplayEditor Win64 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplayEditor Win64 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Win64\UE4Editor.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Mac Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Mac Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Mac Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Mac\BloodWallDisplay</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplayEditor Mac Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplayEditor Mac Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplayEditor Mac Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Mac\UE4Editor</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay HTML5 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay HTML5 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay HTML5 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\HTML5\BloodWallDisplay.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplayEditor HTML5 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplayEditor HTML5 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplayEditor HTML5 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\HTML5\BloodWallDisplayEditor.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Win32 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Win32 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Win32 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win32\BloodWallDisplay-Win32-Shipping.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Win64 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Win64 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Win64 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win64\BloodWallDisplay-Win64-Shipping.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Mac Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Mac Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Mac Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Mac\BloodWallDisplay-Mac-Shipping</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay HTML5 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay HTML5 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay HTML5 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\HTML5\BloodWallDisplay-HTML5-Shipping.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Win32 Test "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Win32 Test "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Win32 Test "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win32\BloodWallDisplay-Win32-Test.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test_Game|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test_Game|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Win64 Test "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Win64 Test "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Win64 Test "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win64\BloodWallDisplay-Win64-Test.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Test_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Test_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay Mac Test "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay Mac Test "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay Mac Test "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Mac\BloodWallDisplay-Mac-Test</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Test_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Test_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat BloodWallDisplay HTML5 Test "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat BloodWallDisplay HTML5 Test "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat BloodWallDisplay HTML5 Test "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\HTML5\BloodWallDisplay-HTML5-Test.exe</NMakeOutput>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\..\BloodWallDisplay.uproject" />
+		<None Include="..\..\Source\BloodWallDisplay.Target.cs" />
+		<None Include="..\..\Source\BloodWallDisplayEditor.Target.cs" />
+		<None Include="..\..\Config\DefaultEditor.ini" />
+		<None Include="..\..\Config\DefaultEngine.ini" />
+		<None Include="..\..\Config\DefaultGame.ini" />
+		<None Include="..\..\Source\BloodWallDisplay\BloodWallDisplay.Build.cs" />
+		<ClCompile Include="..\..\Source\BloodWallDisplay\BloodWallDisplay.cpp" />
+		<ClInclude Include="..\..\Source\BloodWallDisplay\BloodWallDisplay.h" />
+		<ClCompile Include="..\..\Source\BloodWallDisplay\BloodWallDisplayGameModeBase.cpp" />
+		<ClInclude Include="..\..\Source\BloodWallDisplay\BloodWallDisplayGameModeBase.h" />
+	</ItemGroup>
+	<PropertyGroup>
+		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);IS_PROGRAM=0;UE_EDITOR=1;WITH_DEV_AUTOMATION_TESTS=1;WITH_PERF_AUTOMATION_TESTS=1;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=0;WITH_ENGINE=1;WITH_UNREAL_DEVELOPER_TOOLS=1;WITH_COREUOBJECT=1;USE_STATS_WITHOUT_ENGINE=0;WITH_PLUGIN_SUPPORT=0;WITH_PERFCOUNTERS=1;USE_LOGGING_IN_SHIPPING=0;WITH_LOGGING_TO_MEMORY=0;USE_CACHE_FREED_OS_ALLOCS=1;USE_CHECKS_IN_SHIPPING=0;UE_BUILD_MINIMAL=0;WITH_EDITOR=1;WITH_SERVER_CODE=1;WITH_CEF3=1;UBT_COMPILED_PLATFORM=Win64;UBT_COMPILED_TARGET=Editor;WIN32=1;_WIN32_WINNT=0x0601;WINVER=0x0601;PLATFORM_WINDOWS=1;DEPTH_32_BIT_CONVERSION=0;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;ORIGINAL_FILE_NAME="UE4Editor-BloodWallDisplay.dll";UE_IS_ENGINE_MODULE=0;UE_BUILD_DEVELOPMENT_WITH_DEBUGGAME=0;UE_PROJECT_NAME=BloodWallDisplay;DEPRECATED_FORGAME=DEPRECATED;BLOODWALLDISPLAY_API=;UE_ENABLE_ICU=1;WITH_VS_PERF_PROFILER=0;WITH_DIRECTXMATH=0;CORE_API=;COREUOBJECT_API=;WITH_PHYSX=1;WITH_APEX=1;WITH_APEX_CLOTHING=1;WITH_CLOTH_COLLISION_DETECTION=1;WITH_PHYSX_COOKING=1;WITH_NVCLOTH=1;WITH_FLEX=1;WITH_FLEX_DX=1;WITH_FLEX_CUDA=0;WITH_BOX2D=1;WITH_RECAST=1;ENGINE_API=;JSON_API=;SLATE_DEFERRED_DESIRED_SIZE=0;WITH_FREETYPE=1;SLATECORE_API=;INPUTCORE_API=;SLATE_API=;WITH_UNREALPNG=1;WITH_UNREALJPEG=1;WITH_UNREALEXR=1;IMAGEWRAPPER_API=;MESSAGING_API=;RENDERCORE_API=;RHI_API=;SHADERCORE_API=;UTILITYSHADERS_API=;ASSETREGISTRY_API=;ENGINEMESSAGES_API=;ENGINESETTINGS_API=;SYNTHBENCHMARK_API=;RENDERER_API=;GAMEPLAYTAGS_API=;WITH_GAMEPLAY_DEBUGGER=1;AIMODULE_API=;GAMEPLAYTASKS_API=;DATABASESUPPORT_API=;PACKETHANDLER_API=;RELIABILITYHANDLERCOMPONENT_API=;HARDWARESURVEY_API=;UNREALED_API=;BSPMODE_API=;DIRECTORYWATCHER_API=;DOCUMENTATION_API=;PROJECTS_API=;SANDBOXFILE_API=;EDITORSTYLE_API=;SOURCE_CONTROL_WITH_SLATE=1;SOURCECONTROL_API=;UNREALEDMESSAGES_API=;GAMEPLAYDEBUGGER_API=;BLUEPRINTGRAPH_API=;HTTP_PACKAGE=1;HTTP_API=;UNREALAUDIO_API=;FUNCTIONALTESTING_API=;AUTOMATIONCONTROLLER_API=;LOCALIZATION_API=;AUDIOEDITOR_API=;LEVELEDITOR_API=;SETTINGS_API=;INTROTUTORIALS_API=;HEADMOUNTEDDISPLAY_API=;VREDITOR_API=;LANDSCAPE_API=;PROPERTYEDITOR_API=;ACTORPICKERMODE_API=;SCENEDEPTHPICKERMODE_API=;DETAILCUSTOMIZATIONS_API=;CLASSVIEWER_API=;GRAPHEDITOR_API=;CONTENTBROWSER_API=;ENABLE_HTTP_FOR_NFS=1;NETWORKFILESYSTEM_API=;SOCKETS_PACKAGE=1;SOCKETS_API=;UMG_API=;MOVIESCENE_API=;MOVIESCENETRACKS_API=;WITH_OGGVORBIS=1;XAUDIO2_API=;AUDIOMIXERXAUDIO2_API=;UNREALAUDIOXAUDIO2_API=;COLLECTIONMANAGER_API=;ADDCONTENTDIALOG_API=;USE_EMBREE=1;MESHUTILITIES_API=;MESHMERGEUTILITIES_API=;HIERARCHICALLODUTILITIES_API=;MESHREDUCTIONINTERFACE_API=;ASSETTOOLS_API=;KISMETCOMPILER_API=;KISMET_API=;CLOTHINGSYSTEMRUNTIMEINTERFACE_API=;NETWORKREPLAYSTREAMING_API=;AUDIOMIXER_API=</NMakePreprocessorDefinitions>
+		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);C:\Dev\NvPhysX-UnrealEngine\Engine\Source;..\..\Source;..\Build\Win64\UE4Editor\Inc\BloodWallDisplay;..\..\Source\BloodWallDisplay;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Async;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Concurrency;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Containers;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Delegates;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\GenericPlatform;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\HAL;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Logging;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Math;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Misc;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Modules;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization\Csv;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Stats;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Templates;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\UObject;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Windows;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Blueprint;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Internationalization;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Misc;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Serialization;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Templates;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\CoreUObject;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\AI;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\AI\Navigation;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\Animation;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\Curves;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\EdGraph;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\Internationalization;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\Net;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\PacketHandlers;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\Performance;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\Physics;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\ProfilingDebugging;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\Rendering;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\Slate;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\Tests;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine\Public\VisualLogger;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Engine;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Json\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Json\Public\Dom;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Json\Public\Policies;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Json\Public\Serialization;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Json;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Json;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Animation;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Application;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Brushes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Fonts;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Input;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Layout;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Logging;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Rendering;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Sound;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Stats;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Styling;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Textures;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Types;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Widgets;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\SlateCore;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\InputCore\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\InputCore\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\InputCore;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\InputCore;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Application;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Commands;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Docking;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Layout;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\MetaData;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\MultiBox;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Notifications;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Styling;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Text;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Views;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Colors;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Docking;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Images;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Input;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\LayerManager;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Layout;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Navigation;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Notifications;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Text;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Views;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Slate;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\ImageWrapper\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\ImageWrapper\Public\Interfaces;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\ImageWrapper;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\ImageWrapper;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Messaging\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Messaging\Public\Deprecated;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Messaging\Public\Helpers;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Messaging;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Messaging;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\RenderCore\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\RenderCore;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\RenderCore;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\RHI\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\RHI;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\RHI;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\ShaderCore\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\ShaderCore;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\ShaderCore;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\UtilityShaders\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UtilityShaders;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\UtilityShaders;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\AssetRegistry\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AssetRegistry;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\AssetRegistry;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\EngineMessages\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\EngineMessages;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\EngineMessages;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\EngineSettings\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\EngineSettings\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\EngineSettings;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\EngineSettings;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SynthBenchmark\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\SynthBenchmark;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SynthBenchmark;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Renderer\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Renderer;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Renderer;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\GameplayTags\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\GameplayTags\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTags;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\GameplayTags;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\AIModule\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\AIModule\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\AIModule;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\GameplayTasks\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\GameplayTasks\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTasks;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\GameplayTasks;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\DatabaseSupport\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\DatabaseSupport;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\DatabaseSupport;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\PacketHandlers\PacketHandler\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\PacketHandlers\PacketHandler\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\PacketHandler;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\PacketHandlers\PacketHandler;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\PacketHandlers\ReliabilityHandlerComponent\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\ReliabilityHandlerComponent;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\PacketHandlers\ReliabilityHandlerComponent;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\HardwareSurvey\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HardwareSurvey;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\HardwareSurvey;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealLightmass\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEd\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEd\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEd\Public\AutoReimport;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEd\Public\Commandlets;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEd\Public\Dialogs;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEd\Public\DragAndDrop;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEd\Public\Features;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEd\Public\Kismet2;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEd\Public\Layers;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEd\Public\Settings;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEd\Public\Tests;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEd\Public\Toolkits;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEd;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\BspMode\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\BspMode;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\BspMode;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\DirectoryWatcher\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\DirectoryWatcher;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\DirectoryWatcher;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\Documentation\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Documentation;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\Documentation;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Projects\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Projects\Public\Interfaces;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Projects;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Projects;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SandboxFile\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\SandboxFile;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SandboxFile;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\EditorStyle\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\EditorStyle\Public\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\EditorStyle\Public\Interfaces;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\EditorStyle;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\EditorStyle;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\SourceControl\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\SourceControl\Public\Tests;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\SourceControl;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\SourceControl;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEdMessages\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEdMessages\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEdMessages;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\UnrealEdMessages;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\GameplayDebugger\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayDebugger;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\GameplayDebugger;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\BlueprintGraph\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\BlueprintGraph\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\BlueprintGraph;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\BlueprintGraph;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Online\HTTP\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Online\HTTP\Public\GenericPlatform;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Online\HTTP\Public\Interfaces;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Online\HTTP\Public\Windows;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HTTP;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Online\HTTP;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\UnrealAudio\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealAudio;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\UnrealAudio;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\FunctionalTesting\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\FunctionalTesting\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\FunctionalTesting;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\FunctionalTesting;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\AutomationController\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\AutomationController\Public\Interfaces;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AutomationController;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\AutomationController;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\Localization\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\Localization\Public\Serialization;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Localization;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\Localization;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\AudioEditor\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\AudioEditor\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\AudioEditor\Public\AssetTypeActions;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AudioEditor;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\AudioEditor;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\LevelEditor\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\LevelEditor;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\LevelEditor;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\Settings\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Settings;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\Settings;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\IntroTutorials\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\IntroTutorials;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\IntroTutorials;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\VREditor\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\VREditor;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\VREditor;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Landscape\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Landscape\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Landscape;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Landscape;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\PropertyEditor\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\PropertyEditor;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\PropertyEditor;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\ActorPickerMode\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\ActorPickerMode;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\ActorPickerMode;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\SceneDepthPickerMode\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\SceneDepthPickerMode;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\SceneDepthPickerMode;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\DetailCustomizations\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\DetailCustomizations\Public\Customizations;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\DetailCustomizations;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\DetailCustomizations;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\ClassViewer\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\ClassViewer;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\ClassViewer;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\GraphEditor\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\GraphEditor\Public\KismetNodes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\GraphEditor\Public\KismetPins;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GraphEditor;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\GraphEditor;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\ContentBrowser\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\ContentBrowser;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\ContentBrowser;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\NetworkFileSystem\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\NetworkFileSystem\Public\Interfaces;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Interfaces;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\NetworkFileSystem;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\NetworkFileSystem;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Sockets\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Sockets;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Sockets;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\UMG\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\UMG\Public\Animation;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\UMG\Public\Binding;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\UMG\Public\Blueprint;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\UMG\Public\Components;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\UMG\Public\Slate;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\UMG;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\MovieScene\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\MovieScene\Public\Compilation;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\MovieScene\Public\Evaluation;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\MovieScene\Public\Evaluation\Blending;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\MovieScene\Public\Generators;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\MovieScene;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\MovieSceneTracks\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\MovieSceneTracks\Public\Evaluation;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\MovieSceneTracks\Public\Sections;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\MovieSceneTracks\Public\Tracks;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieSceneTracks;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\MovieSceneTracks;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Windows\XAudio2\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\XAudio2;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Windows\XAudio2;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\AudioMixer\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AudioMixerXAudio2;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Windows\AudioMixerXAudio2;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealAudioXAudio2;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Windows\UnrealAudioXAudio2;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\CollectionManager\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\CollectionManager;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\CollectionManager;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\AddContentDialog\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AddContentDialog;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\AddContentDialog;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\ThirdParty\IntelEmbree\Embree2140\Win64\include;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\MeshUtilities\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MeshUtilities;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\MeshUtilities;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\MeshMergeUtilities\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MeshMergeUtilities;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\MeshMergeUtilities;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\HierarchicalLODUtilities\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HierarchicalLODUtilities;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\HierarchicalLODUtilities;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\MeshReductionInterface\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MeshReductionInterface;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\MeshReductionInterface;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\AssetTools\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\AssetTools\Public\AssetTypeActions;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AssetTools;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\AssetTools;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\KismetCompiler\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\KismetCompiler;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\KismetCompiler;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\Kismet\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\Kismet\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\Kismet\Public\Nodes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\Kismet\Public\Profiler;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Kismet;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\Kismet;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\ClothingSystemRuntimeInterface\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\ClothingSystemRuntimeInterface;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\NetworkReplayStreaming\NetworkReplayStreaming\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\NetworkReplayStreaming;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\NetworkReplayStreaming\NetworkReplayStreaming;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\AudioMixer\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\AudioMixer\Public\Components;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\AudioMixer\Public\DSP;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AudioMixer;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\AudioMixer;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.11.25503\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.11.25503\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
+		<NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
+		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+		<NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+	</PropertyGroup>
+	<ItemDefinitionGroup>
+	</ItemDefinitionGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+</Project>

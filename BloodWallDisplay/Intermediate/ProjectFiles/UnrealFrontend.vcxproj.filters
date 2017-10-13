@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\UnrealFrontend.Target.cs" />
+		<Filter Include="Config">
+			<UniqueIdentifier>{58F1044F-0130-4855-8CF9-B2BFA4C60BDC}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Programs\UnrealFrontend\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\UnrealFrontend.Build.cs" />
+		<Filter Include="Private">
+			<UniqueIdentifier>{9C5673CF-73BA-4D12-A955-488D319F0AFA}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\UnrealFrontendMain.cpp">
+			<Filter>Private</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\UnrealFrontendMain.h">
+			<Filter>Private</Filter>
+		</ClInclude >
+		<Filter Include="Private\Commands">
+			<UniqueIdentifier>{1E8EF933-9738-4B7D-AB20-483637BA0301}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Commands\DeployCommand.cpp">
+			<Filter>Private\Commands</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Commands\DeployCommand.h">
+			<Filter>Private\Commands</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Commands\LaunchCommand.cpp">
+			<Filter>Private\Commands</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Commands\LaunchCommand.h">
+			<Filter>Private\Commands</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Commands\LaunchFromProfileCommand.cpp">
+			<Filter>Private\Commands</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Commands\LaunchFromProfileCommand.h">
+			<Filter>Private\Commands</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Commands\PackageCommand.cpp">
+			<Filter>Private\Commands</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Commands\PackageCommand.h">
+			<Filter>Private\Commands</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Commands\StatsConvertCommand.cpp">
+			<Filter>Private\Commands</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Commands\StatsConvertCommand.h">
+			<Filter>Private\Commands</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Commands\StatsDumpMemoryCommand.cpp">
+			<Filter>Private\Commands</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Commands\StatsDumpMemoryCommand.h">
+			<Filter>Private\Commands</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Commands\UserInterfaceCommand.cpp">
+			<Filter>Private\Commands</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Commands\UserInterfaceCommand.h">
+			<Filter>Private\Commands</Filter>
+		</ClInclude >
+		<Filter Include="Private\Linux">
+			<UniqueIdentifier>{2D60E045-BE81-4057-A43A-CAE8588994F9}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Linux\LinuxUnrealFrontendMain.cpp">
+			<Filter>Private\Linux</Filter>
+		</ClCompile >
+		<Filter Include="Private\Mac">
+			<UniqueIdentifier>{2F146F80-F6A5-4B1A-97CB-86B3B4813728}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Mac\MacUnrealFrontendMain.cpp">
+			<Filter>Private\Mac</Filter>
+		</ClCompile >
+		<Filter Include="Private\Windows">
+			<UniqueIdentifier>{9EE59577-24D6-43A5-9ABD-B633F97BB076}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Private\Windows\WindowsUnrealFrontendMain.cpp">
+			<Filter>Private\Windows</Filter>
+		</ClCompile >
+		<Filter Include="Resources">
+			<UniqueIdentifier>{CE4D80E3-8B8C-4D23-BA7A-CC0B33E6D28C}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Resources\Windows">
+			<UniqueIdentifier>{E9F103DB-A522-4D11-B76D-A47AB2D011AB}</UniqueIdentifier>
+		</Filter>
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Resources\Windows\Debug-UnrealFrontend-Win32.manifest">
+			<Filter>Resources\Windows</Filter>
+		</Manifest >
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Resources\Windows\Debug-UnrealFrontend-Win64.manifest">
+			<Filter>Resources\Windows</Filter>
+		</Manifest >
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Resources\Windows\UnrealFrontend-Win32.manifest">
+			<Filter>Resources\Windows</Filter>
+		</Manifest >
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Resources\Windows\UnrealFrontend-Win64.manifest">
+			<Filter>Resources\Windows</Filter>
+		</Manifest >
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Resources\Windows\UnrealFrontend.ico">
+			<Filter>Resources\Windows</Filter>
+		</None >
+		<ResourceCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealFrontend\Resources\Windows\UnrealFrontend.rc">
+			<Filter>Resources\Windows</Filter>
+		</ResourceCompile >
+	</ItemGroup>
+</Project>

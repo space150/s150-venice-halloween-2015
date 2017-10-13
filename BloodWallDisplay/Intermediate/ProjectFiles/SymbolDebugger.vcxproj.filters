@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\SymbolDebugger.Target.cs" />
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\SymbolDebugger.Build.cs" />
+		<Filter Include="Private">
+			<UniqueIdentifier>{8DC2B474-3009-4F36-A778-B79DB9A11D5F}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Private\SSymbolDebugger.cpp">
+			<Filter>Private</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Private\SSymbolDebugger.h">
+			<Filter>Private</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Private\SymbolDebugger.cpp">
+			<Filter>Private</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Private\SymbolDebugger.h">
+			<Filter>Private</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Private\SymbolDebuggerApp.cpp">
+			<Filter>Private</Filter>
+		</ClCompile >
+		<Filter Include="Private\Mac">
+			<UniqueIdentifier>{FD5330CF-8651-45D0-A272-E16E529CDB28}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Private\Mac\SymbolDebuggerMainMac.cpp">
+			<Filter>Private\Mac</Filter>
+		</ClCompile >
+		<Filter Include="Private\Windows">
+			<UniqueIdentifier>{83D2AE71-A989-4B78-BFFE-ED9C53E085B1}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Private\Windows\SymbolDebuggerMainWindows.cpp">
+			<Filter>Private\Windows</Filter>
+		</ClCompile >
+		<Filter Include="Public">
+			<UniqueIdentifier>{FA2B8819-3E19-41FD-B067-42416AC7D61F}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Public\SymbolDebuggerApp.h">
+			<Filter>Public</Filter>
+		</ClInclude >
+		<Filter Include="Resources">
+			<UniqueIdentifier>{4E3FD157-D2B6-41DD-A4F9-1FF3D33B36FD}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Resources\Windows">
+			<UniqueIdentifier>{A045EE61-00FC-41E4-A3F7-3758425D30CD}</UniqueIdentifier>
+		</Filter>
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Resources\Windows\Debug-PCLaunch-Win32.manifest">
+			<Filter>Resources\Windows</Filter>
+		</Manifest >
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Resources\Windows\Debug-PCLaunch-Win64.manifest">
+			<Filter>Resources\Windows</Filter>
+		</Manifest >
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Resources\Windows\PCLaunch-Win32.manifest">
+			<Filter>Resources\Windows</Filter>
+		</Manifest >
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Resources\Windows\PCLaunch-Win64.manifest">
+			<Filter>Resources\Windows</Filter>
+		</Manifest >
+		<ResourceCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Resources\Windows\PCLaunch.rc">
+			<Filter>Resources\Windows</Filter>
+		</ResourceCompile >
+	</ItemGroup>
+</Project>

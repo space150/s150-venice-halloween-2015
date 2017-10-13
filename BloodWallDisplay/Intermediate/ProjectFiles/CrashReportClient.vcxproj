@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug_Program|Win32">
+			<Configuration>Debug_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug_Program|x64">
+			<Configuration>Debug_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Debug_Program|Win32">
+			<Configuration>Mac_Debug_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Debug_Program|x64">
+			<Configuration>Mac_Debug_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Debug_Program|Win32">
+			<Configuration>HTML5_Debug_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Debug_Program|x64">
+			<Configuration>HTML5_Debug_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Development_Program|Win32">
+			<Configuration>Development_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Development_Program|x64">
+			<Configuration>Development_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Development_Program|Win32">
+			<Configuration>Mac_Development_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Development_Program|x64">
+			<Configuration>Mac_Development_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Development_Program|Win32">
+			<Configuration>HTML5_Development_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Development_Program|x64">
+			<Configuration>HTML5_Development_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Shipping_Program|Win32">
+			<Configuration>Shipping_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Shipping_Program|x64">
+			<Configuration>Shipping_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Shipping_Program|Win32">
+			<Configuration>Mac_Shipping_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Shipping_Program|x64">
+			<Configuration>Mac_Shipping_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Shipping_Program|Win32">
+			<Configuration>HTML5_Shipping_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Shipping_Program|x64">
+			<Configuration>HTML5_Shipping_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{488E7DD6-3B2C-4DE8-87B6-F1E3CC3A1D4B}</ProjectGuid>
+		<Keyword>MakeFileProj</Keyword>
+		<RootNamespace>CrashReportClient</RootNamespace>
+       <PlatformToolset>v141</PlatformToolset>
+       <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+       <TargetRuntime>Native</TargetRuntime>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings" />
+	<PropertyGroup Label="UserMacros" />
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat CrashReportClient Win32 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win32 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win32 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Win32\CrashReportClient-Win32-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat CrashReportClient Win64 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win64 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win64 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Win64\CrashReportClient-Win64-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat CrashReportClient Mac Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Mac Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat CrashReportClient Mac Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Mac\CrashReportClient-Mac-Debug</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat CrashReportClient HTML5 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient HTML5 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat CrashReportClient HTML5 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\HTML5\CrashReportClient-HTML5-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat CrashReportClient Win32 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win32 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win32 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Win32\CrashReportClient-Win32-Development.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat CrashReportClient Win64 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win64 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win64 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Win64\CrashReportClient-Win64-Development.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat CrashReportClient Mac Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Mac Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat CrashReportClient Mac Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Mac\CrashReportClient-Mac-Development</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat CrashReportClient HTML5 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient HTML5 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat CrashReportClient HTML5 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\HTML5\CrashReportClient-HTML5-Development.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat CrashReportClient Win32 Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win32 Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win32 Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Win32\CrashReportClient.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat CrashReportClient Win64 Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win64 Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win64 Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Win64\CrashReportClient.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat CrashReportClient Mac Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Mac Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat CrashReportClient Mac Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\Mac\CrashReportClient</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Build.bat CrashReportClient HTML5 Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient HTML5 Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>C:\Dev\NvPhysX-UnrealEngine\Engine\Build\BatchFiles\Clean.bat CrashReportClient HTML5 Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>C:\Dev\NvPhysX-UnrealEngine\Engine\Binaries\HTML5\CrashReportClient.exe</NMakeOutput>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\CrashReportClient.Target.cs" />
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Programs\CrashReportClient\Config\DefaultEngine.ini" />
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\CrashReportClient.Build.cs" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashDescription.cpp" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashDescription.h" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportAnalytics.cpp" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportAnalytics.h" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClient.cpp" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClient.h" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientApp.cpp" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientConfig.cpp" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientConfig.h" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientStyle.cpp" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientStyle.h" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientUnattended.cpp" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientUnattended.h" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportUtil.h" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashUpload.cpp" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashUpload.h" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\GenericErrorReport.cpp" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\GenericErrorReport.h" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\MainLoopTiming.cpp" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\MainLoopTiming.h" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PendingReports.cpp" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PendingReports.h" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PlatformErrorReport.h" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\SCrashReportClient.cpp" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\SCrashReportClient.h" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Linux\CrashReportClientMainLinux.cpp" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Linux\LinuxErrorReport.h" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\CrashReportClientMainMac.cpp" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\MacErrorReport.cpp" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\MacErrorReport.h" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\CrashReportClientMainWindows.cpp" />
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\WindowsErrorReport.cpp" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\WindowsErrorReport.h" />
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Public\CrashReportClientApp.h" />
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient-Win32.manifest" />
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient-Win64.manifest" />
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient.ico" />
+		<ResourceCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient.rc" />
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\Debug-CrashReportClient-Win32.manifest" />
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\Debug-CrashReportClient-Win64.manifest" />
+	</ItemGroup>
+	<PropertyGroup>
+		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);IS_PROGRAM=1;NOINITCRASHREPORTER=1;WITH_DEV_AUTOMATION_TESTS=1;WITH_PERF_AUTOMATION_TESTS=1;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=1;WITH_ENGINE=0;WITH_UNREAL_DEVELOPER_TOOLS=0;WITH_COREUOBJECT=1;USE_STATS_WITHOUT_ENGINE=0;WITH_PLUGIN_SUPPORT=0;WITH_PERFCOUNTERS=0;USE_LOGGING_IN_SHIPPING=1;WITH_LOGGING_TO_MEMORY=0;USE_CACHE_FREED_OS_ALLOCS=1;USE_CHECKS_IN_SHIPPING=1;UE_BUILD_MINIMAL=1;WITH_EDITOR=0;WITH_SERVER_CODE=1;WITH_CEF3=1;UBT_COMPILED_PLATFORM=Win64;UBT_COMPILED_TARGET=Program;WIN32=1;_WIN32_WINNT=0x0601;WINVER=0x0601;PLATFORM_WINDOWS=1;DEPTH_32_BIT_CONVERSION=0;PROJECT_COPYRIGHT_STRING=Fill out your copyright notice in the Description page of Project Settings.;PROJECT_PRODUCT_NAME=UE4Game;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;ORIGINAL_FILE_NAME="CrashReportClient-CrashReportClient-Win64-Development.lib";UE_IS_ENGINE_MODULE=0;UE_BUILD_DEVELOPMENT_WITH_DEBUGGAME=0;CRASHREPORTCLIENT_API=;UE_ENABLE_ICU=1;WITH_VS_PERF_PROFILER=0;WITH_DIRECTXMATH=0;CORE_API=;COREUOBJECT_API=;CRASHDEBUGHELPER_API=;SOURCE_CONTROL_WITH_SLATE=1;SOURCECONTROL_API=;INPUTCORE_API=;HTTP_PACKAGE=1;HTTP_API=;JSON_API=;PROJECTS_API=;XMLPARSER_API=;ANALYTICS_API=;ANALYTICSET_API=;DESKTOPPLATFORM_API=;LAUNCHERPLATFORM_API=;SLATE_API=;SLATE_DEFERRED_DESIRED_SIZE=0;WITH_FREETYPE=1;SLATECORE_API=;WITH_UNREALPNG=1;WITH_UNREALJPEG=1;WITH_UNREALEXR=1;IMAGEWRAPPER_API=;STANDALONERENDERER_API=;MESSAGELOG_API=;SLATE_REFLECTOR_HAS_SESSION_SERVICES=0;SLATE_REFLECTOR_HAS_DESKTOP_PLATFORM=1;SLATEREFLECTOR_API=</NMakePreprocessorDefinitions>
+		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);C:\Dev\NvPhysX-UnrealEngine\Engine\Source;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Launch\Private;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Launch\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\CrashReportClient;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Async;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Concurrency;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Containers;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Delegates;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\GenericPlatform;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\HAL;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Logging;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Math;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Misc;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Modules;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization\Csv;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Stats;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Templates;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\UObject;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core\Public\Windows;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Core;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Blueprint;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Internationalization;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Misc;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Serialization;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Templates;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\CoreUObject;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\CoreUObject;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\CrashDebugHelper\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\CrashDebugHelper;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\CrashDebugHelper;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\SourceControl\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\SourceControl\Public\Tests;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\SourceControl;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\SourceControl;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\InputCore\Classes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\InputCore\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\InputCore;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\InputCore;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Online\HTTP\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Online\HTTP\Public\GenericPlatform;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Online\HTTP\Public\Interfaces;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Online\HTTP\Public\Windows;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\HTTP;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Online\HTTP;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Json\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Json\Public\Dom;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Json\Public\Policies;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Json\Public\Serialization;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\Json;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Json;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Projects\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Projects\Public\Interfaces;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\Projects;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Projects;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Editor\XmlParser\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\XmlParser\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\XmlParser;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\XmlParser;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Analytics\Analytics\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Analytics\Analytics\Public\Interfaces;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\Analytics;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Analytics\Analytics;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Analytics\AnalyticsET\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\AnalyticsET;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Analytics\AnalyticsET;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\DesktopPlatform\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\DesktopPlatform;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\DesktopPlatform;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Portal\LauncherPlatform\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\LauncherPlatform;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Portal\LauncherPlatform;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Application;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Commands;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Docking;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Layout;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\MetaData;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\MultiBox;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Notifications;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Styling;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Text;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework\Views;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Colors;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Docking;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Images;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Input;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\LayerManager;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Layout;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Navigation;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Notifications;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Text;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets\Views;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\Slate;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\Slate;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Animation;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Application;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Brushes;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Fonts;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Input;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Layout;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Logging;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Rendering;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Sound;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Stats;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Styling;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Textures;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Types;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Widgets;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\SlateCore;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\SlateCore;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\ImageWrapper\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\ImageWrapper\Public\Interfaces;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\ImageWrapper;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Runtime\ImageWrapper;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\StandaloneRenderer\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\StandaloneRenderer;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\StandaloneRenderer;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\MessageLog\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\MessageLog;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\MessageLog;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\SlateReflector\Public;C:\Dev\NvPhysX-UnrealEngine\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\SlateReflector;C:\Dev\NvPhysX-UnrealEngine\Engine\Source\Developer\SlateReflector;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.11.25503\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.11.25503\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
+		<NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
+		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+		<NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+	</PropertyGroup>
+	<ItemDefinitionGroup>
+	</ItemDefinitionGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+</Project>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\ShaderCompileWorker.Target.cs" />
+		<Filter Include="Config">
+			<UniqueIdentifier>{2DEA9A18-3C89-4E7C-9AB7-B296F4D8576A}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Programs\ShaderCompileWorker\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\ShaderCompileWorker.Build.cs" />
+		<Filter Include="Private">
+			<UniqueIdentifier>{ED189D53-ED21-47EC-B7FF-586B96AD1F85}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\Private\ShaderCompileWorker.cpp">
+			<Filter>Private</Filter>
+		</ClCompile >
+		<Filter Include="Resources">
+			<UniqueIdentifier>{604ECAB5-447E-484A-AA46-EE5AF0A29B22}</UniqueIdentifier>
+		</Filter>
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\Resources\Debug-Win32.manifest">
+			<Filter>Resources</Filter>
+		</Manifest >
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\Resources\Debug-Win64.manifest">
+			<Filter>Resources</Filter>
+		</Manifest >
+		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\Resources\resource.h">
+			<Filter>Resources</Filter>
+		</ClInclude >
+		<ResourceCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\Resources\Resource.rc">
+			<Filter>Resources</Filter>
+		</ResourceCompile >
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\Resources\Win32.manifest">
+			<Filter>Resources</Filter>
+		</Manifest >
+		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\Resources\Win64.manifest">
+			<Filter>Resources</Filter>
+		</Manifest >
+	</ItemGroup>
+</Project>

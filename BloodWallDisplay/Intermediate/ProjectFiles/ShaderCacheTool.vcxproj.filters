@@ -5,7 +5,7 @@
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Mac\ShaderCacheTool\ShaderCacheTool.Target.cs" />
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Mac\ShaderCacheTool\ShaderCacheTool.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{112CB2B8-C417-4D6B-ABEC-92EA536B29D3}</UniqueIdentifier>
+			<UniqueIdentifier>{9A8CDE5D-7826-44B8-AE96-7817FCADE746}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Mac\ShaderCacheTool\Private\ShaderCacheTool.cpp">
 			<Filter>Private</Filter>

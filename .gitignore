@@ -250,6 +250,7 @@ skeleton-tracking-wall/halloween-2016/kinect-halloween-characters.psd
 # Precompiled Headers
 *.gch
 *.pch
+
 # Compiled Dynamic libraries
 *.so
 *.dylib

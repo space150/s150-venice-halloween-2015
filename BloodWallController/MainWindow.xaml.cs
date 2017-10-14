@@ -16,6 +16,9 @@ namespace Microsoft.Samples.Kinect.BodyBasics
     using System.Windows.Media;
     using System.Windows.Media.Imaging;
     using Microsoft.Kinect;
+    using System.Text;
+    using System.Net;
+    using System.Net.Sockets;
 
     /// <summary>
     /// Interaction logic for MainWindow
@@ -126,6 +129,9 @@ namespace Microsoft.Samples.Kinect.BodyBasics
         /// Current status text to display
         /// </summary>
         private string statusText = null;
+
+        // UDP broadcasting
+        private UdpClient udpClient;
 
         /// <summary>
         /// Initializes a new instance of the MainWindow class.
@@ -270,6 +276,8 @@ namespace Microsoft.Samples.Kinect.BodyBasics
             {
                 this.bodyFrameReader.FrameArrived += this.Reader_FrameArrived;
             }
+
+            setupUDPBroadcaster();
         }
 
         /// <summary>
@@ -291,6 +299,8 @@ namespace Microsoft.Samples.Kinect.BodyBasics
                 this.kinectSensor.Close();
                 this.kinectSensor = null;
             }
+
+            teardownUDPBroadcaster();
         }
 
         /// <summary>
@@ -358,6 +368,8 @@ namespace Microsoft.Samples.Kinect.BodyBasics
 
                             this.DrawHand(body.HandLeftState, jointPoints[JointType.HandLeft], dc);
                             this.DrawHand(body.HandRightState, jointPoints[JointType.HandRight], dc);
+
+                            sendUDPBroadcast(jointPoints[JointType.HandLeft], jointPoints[JointType.HandRight]);
                         }
                     }
 
@@ -512,6 +524,26 @@ namespace Microsoft.Samples.Kinect.BodyBasics
             // on failure, set the status text
             this.StatusText = this.kinectSensor.IsAvailable ? Properties.Resources.RunningStatusText
                                                             : Properties.Resources.SensorNotAvailableStatusText;
+        }
+
+        private void setupUDPBroadcaster()
+        {
+            udpClient = new UdpClient();
+
+            IPEndPoint ep = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 11000); // endpoint where server is listening
+            udpClient.Connect(ep);
+        }
+
+        private void teardownUDPBroadcaster()
+        {
+            udpClient.Close();
+        }
+
+        private void sendUDPBroadcast(Point leftHandPos, Point rightHandPos)
+        {
+            string dataString = string.Format("l:{0},{1};r:{2},{3}", leftHandPos.X, leftHandPos.Y, rightHandPos.X, rightHandPos.Y);
+            Byte[] buffer = Encoding.Unicode.GetBytes(dataString);
+            udpClient.Send(buffer, buffer.Length);
         }
     }
 }

@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\BloodWallDisplay.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{EEC76A8B-EA9E-4E15-B37C-9E0565C95341}</UniqueIdentifier>
+			<UniqueIdentifier>{28414241-6349-4C52-BEAC-4AC7F48673EA}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\BloodWallDisplay.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{C1044E66-3BC5-401F-8F1C-18038CD0825F}</UniqueIdentifier>
+			<UniqueIdentifier>{22E385C9-D991-465F-B8BC-359178148609}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -25,7 +25,7 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\BloodWallDisplay">
-			<UniqueIdentifier>{49D85487-0779-4F2E-95E5-2EC71541E24D}</UniqueIdentifier>
+			<UniqueIdentifier>{C09D3E39-8FAE-4828-A1F7-56B34273E228}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\BloodWallDisplay\BloodWallDisplay.Build.cs">
 			<Filter>Source\BloodWallDisplay</Filter>
@@ -40,6 +40,12 @@
 			<Filter>Source\BloodWallDisplay</Filter>
 		</ClCompile >
 		<ClInclude Include="..\..\Source\BloodWallDisplay\BloodWallDisplayGameModeBase.h">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\BloodWallDisplay\UUDPNetworkingWrapper.cpp">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BloodWallDisplay\UUDPNetworkingWrapper.h">
 			<Filter>Source\BloodWallDisplay</Filter>
 		</ClInclude >
 	</ItemGroup>

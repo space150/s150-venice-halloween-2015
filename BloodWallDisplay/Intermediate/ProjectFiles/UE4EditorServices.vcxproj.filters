@@ -5,16 +5,16 @@
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\UE4EditorServices.Target.cs" />
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\UE4EditorServices.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{830A0FDC-8995-4244-9CEC-3F011B819BB6}</UniqueIdentifier>
+			<UniqueIdentifier>{39F309BF-6259-4ED9-8469-73D767981488}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Private\Linux">
-			<UniqueIdentifier>{66479F21-E458-4B7E-84FB-1968282385C6}</UniqueIdentifier>
+			<UniqueIdentifier>{C3ED7033-1E28-498A-A29D-20377B98779C}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\Private\Linux\UE4EditorServicesMain.cpp">
 			<Filter>Private\Linux</Filter>
 		</ClCompile >
 		<Filter Include="Private\Mac">
-			<UniqueIdentifier>{E17F0CA5-535E-4CCE-9AF3-C86CBF9BEAB6}</UniqueIdentifier>
+			<UniqueIdentifier>{DCE401F4-3D27-4D73-85FA-FC3C33460A06}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\Private\Mac\UE4EditorServicesAppDelegate.cpp">
 			<Filter>Private\Mac</Filter>
@@ -26,7 +26,7 @@
 			<Filter>Private\Mac</Filter>
 		</ClCompile >
 		<Filter Include="Private\Windows">
-			<UniqueIdentifier>{419463D8-12BE-4679-AB4D-CE72ADE11F51}</UniqueIdentifier>
+			<UniqueIdentifier>{693874EB-E26E-43C6-90B6-ACF2C9C10A75}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\Private\Windows\UE4EditorServicesMain.cpp">
 			<Filter>Private\Windows</Filter>

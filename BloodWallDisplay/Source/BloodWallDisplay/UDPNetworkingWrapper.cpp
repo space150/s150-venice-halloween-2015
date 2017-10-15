@@ -16,75 +16,32 @@ UUDPNetworkingWrapper* UUDPNetworkingWrapper::ConstructUDPWrapper(const FString&
 	wrapper->SocketSubsystem = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM);
 	FIPv4Address::Parse(TheIP, wrapper->RemoteAdress);
 
-	wrapper->RemoteEndPoint = FIPv4Endpoint(wrapper->RemoteAdress, ThePort);
-
-	// First set our socket null
-	wrapper->SenderSocket = nullptr;
-
-	if (wrapper->SocketSubsystem != nullptr) // If socket subsytem is good
-	{
-		wrapper->SenderSocket = wrapper->SocketSubsystem->CreateSocket(NAME_DGram, *Description, true);
-
-		if (wrapper->SenderSocket != nullptr) // Is our socket created
-		{
-			// Setup the socket 
-			bool Error = !wrapper->SenderSocket->SetNonBlocking(!Blocking) ||
-				!wrapper->SenderSocket->SetReuseAddr(Reusable) ||
-				!wrapper->SenderSocket->SetBroadcast(AllowBroadcast) ||
-				!wrapper->SenderSocket->SetRecvErr();
-
-			if (!Error)
-			{
-				if (Bound)
-				{
-					Error = !wrapper->SenderSocket->Bind(*wrapper->RemoteEndPoint.ToInternetAddr());
-				}
-			}
-
-			if (!Error)
-			{
-				int32 OutNewSize;
-
-				wrapper->SenderSocket->SetReceiveBufferSize(BufferSize, OutNewSize);
-				wrapper->SenderSocket->SetSendBufferSize(BufferSize, OutNewSize);
-			}
-
-			if (Error)
-			{
-				GLog->Logf(TEXT("FUdpSocketBuilder: Failed to create the socket %s as configured"), *Description);
-
-				wrapper->SocketSubsystem->DestroySocket(wrapper->SenderSocket);
-				wrapper->SenderSocket = nullptr;
-			}
-		}
-
-	}
-
+	wrapper->SenderSocket = FUdpSocketBuilder(TEXT("DATA"))
+		.AsNonBlocking()
+		.AsReusable()
+		.BoundToAddress(FIPv4Address::Any)
+		.BoundToPort(ThePort)
+		.WithMulticastLoopback();
 
 	return wrapper;
 }
 
-bool UUDPNetworkingWrapper::sendMessage(FString Message)
+bool UUDPNetworkingWrapper::sendMessage(int32 port, FString Message)
 {
-	if (!SenderSocket) return false;
-
-	int32 BytesSent;
-	FTimespan waitTime = FTimespan(10);
-	TCHAR *serializedChar = Message.GetCharArray().GetData();
+	FSocket* Socket = FUdpSocketBuilder(TEXT("DATA"))
+		.AsNonBlocking()
+		.AsReusable()
+		.WithMulticastLoopback();
+	FString se = Message;
+	FIPv4Endpoint re = FIPv4Endpoint(FIPv4Address::LanBroadcast, port);
+	bool c = Socket->Connect(*re.ToInternetAddr());
+	TCHAR *serializedChar = se.GetCharArray().GetData();
 	int32 size = FCString::Strlen(serializedChar);
 	int32 sent = 0;
+	bool s = Socket->Send((uint8*)TCHAR_TO_UTF8(serializedChar), size, sent);
+	Socket->Close();
 
-	// Send to
-	//myRecieverWorker = UDPReceiveWorker::JoyInit(SenderSocket, waitTime);
-	bool success = SenderSocket->SendTo((uint8*)TCHAR_TO_UTF8(serializedChar), size, BytesSent, *RemoteEndPoint.ToInternetAddr());
-	if (success && BytesSent > 0) // Success
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return s;
 }
 
 FString UUDPNetworkingWrapper::GrabWaitingMessage()
@@ -133,6 +90,5 @@ void UUDPNetworkingWrapper::UDPDestructor()
 	SocketSubsystem->DestroySocket(SenderSocket);
 	SenderSocket = nullptr;
 	SocketSubsystem = nullptr;
-	//myRecieverWorker = nullptr;
 }
 

@@ -45,7 +45,7 @@ public:
 	* @param Message The message to be sent.
 	*/
 	UFUNCTION(BlueprintCallable, Category = "UDPNetworking")
-		bool sendMessage(FString Message);
+		bool sendMessage(int32 port, FString Message);
 
 	//////////////////////////////////////////////////////////////////////////
 	// Destruction and reset

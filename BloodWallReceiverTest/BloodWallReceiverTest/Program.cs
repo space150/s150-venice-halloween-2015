@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
+using System.Windows;
 
 namespace BloodWallReceiverTest
 {
@@ -12,16 +13,45 @@ namespace BloodWallReceiverTest
     {
         static void Main(string[] args)
         {
+            //receive();
+            send();
+        }
+
+        private static void receive()
+        {
             UdpClient client = new UdpClient(11000);
             IPEndPoint localEp = new IPEndPoint(IPAddress.Any, 11000);
-
-            Console.WriteLine("Listening this will never quit so you will need to ctrl-c to quit!");
+            
+            Console.WriteLine("Listening will never stop so you will need to ctrl-c to quit!");
             while (true)
             {
                 Byte[] data = client.Receive(ref localEp);
-                string strData = Encoding.Unicode.GetString(data);
+                string strData = Encoding.ASCII.GetString(data);
                 Console.WriteLine(strData);
             }
         }
+
+        private static void send()
+        {
+            int i = 0;
+
+            Console.WriteLine("Sending will never stop so you will need to ctrl-c to quit!");
+            while (true)
+            {
+                UdpClient client = new UdpClient();
+                IPEndPoint ip = new IPEndPoint(IPAddress.Broadcast, 11000);
+                string dataString = string.Format("{0}", i);
+                byte[] bytes = Encoding.ASCII.GetBytes(dataString);
+                client.Send(bytes, bytes.Length, ip);
+                client.Close();
+
+                Console.WriteLine(dataString);
+
+                i += 1;
+
+                System.Threading.Thread.Sleep(1000);
+            }
+        }
+
     }
 }

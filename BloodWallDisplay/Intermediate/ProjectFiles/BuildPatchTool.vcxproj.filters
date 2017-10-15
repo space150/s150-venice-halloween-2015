@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\BuildPatchTool.Target.cs" />
 		<Filter Include="Config">
-			<UniqueIdentifier>{0605103A-7B57-4716-A2B3-1BC0212E9E56}</UniqueIdentifier>
+			<UniqueIdentifier>{35EC7F59-9242-4FDD-BF76-FB34EF2785DB}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Programs\BuildPatchTool\Config\DefaultEngine.ini">
 			<Filter>Config</Filter>
@@ -12,7 +12,7 @@
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\BuildPatchTool.Automation.cs" />
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\BuildPatchTool.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{83B6E2C5-EA6C-413A-99F1-E3E748D509A0}</UniqueIdentifier>
+			<UniqueIdentifier>{049723C1-3327-426B-84DD-F34622786D85}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Private\BuildPatchTool.cpp">
 			<Filter>Private</Filter>
@@ -21,7 +21,7 @@
 			<Filter>Private</Filter>
 		</ClCompile >
 		<Filter Include="Private\ToolModes">
-			<UniqueIdentifier>{56A7AA37-41FE-4732-B000-E614B81ADCD2}</UniqueIdentifier>
+			<UniqueIdentifier>{DD4CF743-32CB-4775-861A-8618D6947E53}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Private\ToolModes\CompactifyMode.cpp">
 			<Filter>Private\ToolModes</Filter>
@@ -39,19 +39,19 @@
 			<Filter>Private\ToolModes</Filter>
 		</ClCompile >
 		<Filter Include="Public">
-			<UniqueIdentifier>{00FE3702-CBE0-4E7C-9F0C-931DC236EE98}</UniqueIdentifier>
+			<UniqueIdentifier>{4E953FEA-7053-4AB8-925E-C0ADE637FDFC}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Public\BuildPatchTool.h">
 			<Filter>Public</Filter>
 		</ClInclude >
 		<Filter Include="Public\Interfaces">
-			<UniqueIdentifier>{57D9D0B8-F867-40EC-894C-7AF9460A24AB}</UniqueIdentifier>
+			<UniqueIdentifier>{A937DC52-08C9-4E04-AA51-E5706A8C8A97}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Public\Interfaces\ToolMode.h">
 			<Filter>Public\Interfaces</Filter>
 		</ClInclude >
 		<Filter Include="Public\ToolModes">
-			<UniqueIdentifier>{AAFA2D3E-8E6D-4CE8-AE15-30C9D57DC02E}</UniqueIdentifier>
+			<UniqueIdentifier>{095035A6-18E7-4F87-90C2-B40C5F15F9BB}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\BuildPatchTool\Public\ToolModes\CompactifyMode.h">
 			<Filter>Public\ToolModes</Filter>

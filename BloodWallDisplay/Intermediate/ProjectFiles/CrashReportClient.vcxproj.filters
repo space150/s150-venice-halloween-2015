@@ -4,14 +4,14 @@
 	<ItemGroup>
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\CrashReportClient.Target.cs" />
 		<Filter Include="Config">
-			<UniqueIdentifier>{8673A923-88A6-4144-9202-5E9F7CDC6EAD}</UniqueIdentifier>
+			<UniqueIdentifier>{85A391F2-25FF-4DA4-8D41-B43782894C13}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Programs\CrashReportClient\Config\DefaultEngine.ini">
 			<Filter>Config</Filter>
 		</None >
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\CrashReportClient.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{75EE17B9-6CD9-4757-80DD-945ED6875AD1}</UniqueIdentifier>
+			<UniqueIdentifier>{98E09510-A3F8-4637-B06A-FA9D5C44DA1D}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashDescription.cpp">
 			<Filter>Private</Filter>
@@ -89,7 +89,7 @@
 			<Filter>Private</Filter>
 		</ClInclude >
 		<Filter Include="Private\Linux">
-			<UniqueIdentifier>{ADF91C01-8C15-4AC1-9146-17351F9081A3}</UniqueIdentifier>
+			<UniqueIdentifier>{A73878D3-0F03-4A45-AA4E-B9D0A896C2FA}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Linux\CrashReportClientMainLinux.cpp">
 			<Filter>Private\Linux</Filter>
@@ -98,7 +98,7 @@
 			<Filter>Private\Linux</Filter>
 		</ClInclude >
 		<Filter Include="Private\Mac">
-			<UniqueIdentifier>{CEAA14A1-19FE-40EA-B61E-862F54B887A8}</UniqueIdentifier>
+			<UniqueIdentifier>{9BD77101-FA4D-4EB2-AB44-37B752340F11}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\CrashReportClientMainMac.cpp">
 			<Filter>Private\Mac</Filter>
@@ -110,7 +110,7 @@
 			<Filter>Private\Mac</Filter>
 		</ClInclude >
 		<Filter Include="Private\Windows">
-			<UniqueIdentifier>{35547B88-BCF7-45CD-993D-D1F64E92B2CE}</UniqueIdentifier>
+			<UniqueIdentifier>{CC4223D1-247A-4E36-A25D-ECD17620DDFD}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\CrashReportClientMainWindows.cpp">
 			<Filter>Private\Windows</Filter>
@@ -122,16 +122,16 @@
 			<Filter>Private\Windows</Filter>
 		</ClInclude >
 		<Filter Include="Public">
-			<UniqueIdentifier>{16316D6E-883C-4A09-9807-75776599F19E}</UniqueIdentifier>
+			<UniqueIdentifier>{C529C11A-D37E-4179-A8F6-20034DC8E9AE}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Public\CrashReportClientApp.h">
 			<Filter>Public</Filter>
 		</ClInclude >
 		<Filter Include="Resources">
-			<UniqueIdentifier>{1903951C-217E-4D27-88E0-A868F9721C91}</UniqueIdentifier>
+			<UniqueIdentifier>{4D30E8B2-4578-430D-804D-6C17C542AA9E}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Resources\Windows">
-			<UniqueIdentifier>{1A8C5158-8D7F-44C3-ACA9-9163C3162F95}</UniqueIdentifier>
+			<UniqueIdentifier>{0F5BCF5F-ACB7-4281-9610-9A74750A3925}</UniqueIdentifier>
 		</Filter>
 		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient-Win32.manifest">
 			<Filter>Resources\Windows</Filter>

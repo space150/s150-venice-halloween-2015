@@ -5,7 +5,7 @@
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\TestPAL\TestPAL.Target.cs" />
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\TestPAL\TestPAL.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{4BB1A97A-FBA1-474B-A938-23B9164F959C}</UniqueIdentifier>
+			<UniqueIdentifier>{E03AFBD7-AE61-49EF-89D2-91307278DDDF}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\TestPAL\Private\Main.cpp">
 			<Filter>Private</Filter>

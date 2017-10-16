@@ -35,15 +35,17 @@ namespace BloodWallReceiverTest
         {
             int i = 0;
 
+            UdpClient client = new UdpClient();
+            IPEndPoint ip = new IPEndPoint(IPAddress.Broadcast, 11000);
+
             Console.WriteLine("Sending will never stop so you will need to ctrl-c to quit!");
             while (true)
             {
-                UdpClient client = new UdpClient();
-                IPEndPoint ip = new IPEndPoint(IPAddress.Broadcast, 11000);
+                
                 string dataString = string.Format("{0}", i);
                 byte[] bytes = Encoding.ASCII.GetBytes(dataString);
                 client.Send(bytes, bytes.Length, ip);
-                client.Close();
+                
 
                 Console.WriteLine(dataString);
 
@@ -51,6 +53,8 @@ namespace BloodWallReceiverTest
 
                 System.Threading.Thread.Sleep(1000);
             }
+
+            client.Close();
         }
 
     }

@@ -5,7 +5,7 @@
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Windows\BootstrapPackagedGame\BootstrapPackagedGame.Target.cs" />
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Windows\BootstrapPackagedGame\BootstrapPackagedGame.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{AE7F2135-538F-4E69-9957-F8C8FE1AACF4}</UniqueIdentifier>
+			<UniqueIdentifier>{3F6E33C2-8F8C-4D68-BBBA-735430ABC22D}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\Windows\BootstrapPackagedGame\Private\BootstrapPackagedGame.cpp">
 			<Filter>Private</Filter>

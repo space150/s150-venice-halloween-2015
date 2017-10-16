@@ -5,7 +5,7 @@
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\SymbolDebugger.Target.cs" />
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\SymbolDebugger.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{20C949B5-01AE-4FFC-A1F1-0C492756E9C5}</UniqueIdentifier>
+			<UniqueIdentifier>{96B5983E-7424-4003-BE77-0F2E4843BFAB}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Private\SSymbolDebugger.cpp">
 			<Filter>Private</Filter>
@@ -23,28 +23,28 @@
 			<Filter>Private</Filter>
 		</ClCompile >
 		<Filter Include="Private\Mac">
-			<UniqueIdentifier>{3F3AC8CB-E6DC-469D-AE57-4F258BF971AA}</UniqueIdentifier>
+			<UniqueIdentifier>{E1A8554C-03F5-400F-831B-489DB0E03B49}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Private\Mac\SymbolDebuggerMainMac.cpp">
 			<Filter>Private\Mac</Filter>
 		</ClCompile >
 		<Filter Include="Private\Windows">
-			<UniqueIdentifier>{3BECC4CA-2785-4EE5-8AB0-2A43E6CE3064}</UniqueIdentifier>
+			<UniqueIdentifier>{90FEA513-4011-4FE1-94B9-7ED2681B9AAB}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Private\Windows\SymbolDebuggerMainWindows.cpp">
 			<Filter>Private\Windows</Filter>
 		</ClCompile >
 		<Filter Include="Public">
-			<UniqueIdentifier>{1C289B75-7FD5-4565-B2AF-48355A9BD186}</UniqueIdentifier>
+			<UniqueIdentifier>{66D274CE-89A6-4449-828A-269DD0BF802F}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Public\SymbolDebuggerApp.h">
 			<Filter>Public</Filter>
 		</ClInclude >
 		<Filter Include="Resources">
-			<UniqueIdentifier>{5AD5F0B9-A977-4704-BA33-1E7155D54C64}</UniqueIdentifier>
+			<UniqueIdentifier>{D260FDEE-3205-4220-ADE5-822228ECF6DE}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Resources\Windows">
-			<UniqueIdentifier>{3520CDB1-5390-476B-B4E6-F6EB63BB8A40}</UniqueIdentifier>
+			<UniqueIdentifier>{15B70627-A01C-43D6-B9D8-CA07D94B3E53}</UniqueIdentifier>
 		</Filter>
 		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\SymbolDebugger\Resources\Windows\Debug-PCLaunch-Win32.manifest">
 			<Filter>Resources\Windows</Filter>

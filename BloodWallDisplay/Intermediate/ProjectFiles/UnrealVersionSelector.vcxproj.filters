@@ -5,7 +5,7 @@
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealVersionSelector\UnrealVersionSelector.Target.cs" />
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealVersionSelector\UnrealVersionSelector.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{C94D31A8-78F8-48AB-BE11-5C870725B41E}</UniqueIdentifier>
+			<UniqueIdentifier>{67825C68-D927-4332-83F9-24425F6BE432}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealVersionSelector\Private\PlatformInstallation.cpp">
 			<Filter>Private</Filter>
@@ -20,7 +20,7 @@
 			<Filter>Private</Filter>
 		</ClInclude >
 		<Filter Include="Private\GenericPlatform">
-			<UniqueIdentifier>{AB397219-C72C-479C-AF84-C0244AE7AA0D}</UniqueIdentifier>
+			<UniqueIdentifier>{A9C106EE-46A9-4369-9944-B5CBC449CD5A}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealVersionSelector\Private\GenericPlatform\GenericPlatformInstallation.cpp">
 			<Filter>Private\GenericPlatform</Filter>
@@ -29,7 +29,7 @@
 			<Filter>Private\GenericPlatform</Filter>
 		</ClInclude >
 		<Filter Include="Private\Windows">
-			<UniqueIdentifier>{93CAE7E5-C775-4B26-A96C-4495BDFCBCFA}</UniqueIdentifier>
+			<UniqueIdentifier>{ACC3A0FC-ED61-40B4-9126-2171676EB3C5}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealVersionSelector\Private\Windows\WindowsPlatformInstallation.cpp">
 			<Filter>Private\Windows</Filter>
@@ -38,7 +38,7 @@
 			<Filter>Private\Windows</Filter>
 		</ClInclude >
 		<Filter Include="Private\Windows\Resources">
-			<UniqueIdentifier>{4DFC0B5B-C14A-41A4-9490-C6170CDDD33D}</UniqueIdentifier>
+			<UniqueIdentifier>{50756927-21F6-4ECE-A69B-1B15B408952B}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\UnrealVersionSelector\Private\Windows\Resources\Icon.ico">
 			<Filter>Private\Windows\Resources</Filter>

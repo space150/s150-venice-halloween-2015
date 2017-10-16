@@ -1,55 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup>
-    <None Include="..\..\BloodWallDisplay.uproject" />
-    <Filter Include="Source">
-      <UniqueIdentifier>{AB45DB6D-1A5A-4623-B31F-F940ACD38DEB}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\BloodWallDisplay.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <None Include="..\..\Source\BloodWallDisplayEditor.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <Filter Include="Config">
-      <UniqueIdentifier>{82EC58C7-FEDC-4C29-9B9E-C4C719AB902E}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Config\DefaultEditor.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultEngine.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultGame.ini">
-      <Filter>Config</Filter>
-    </None>
-    <Filter Include="Source\BloodWallDisplay">
-      <UniqueIdentifier>{928B26D3-3937-4333-9931-DBD9F6410E5B}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\BloodWallDisplay\BloodWallDisplay.Build.cs">
-      <Filter>Source\BloodWallDisplay</Filter>
-    </None>
-    <ClCompile Include="..\..\Source\BloodWallDisplay\BloodWallDisplay.cpp">
-      <Filter>Source\BloodWallDisplay</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\BloodWallDisplay\BloodWallDisplay.h">
-      <Filter>Source\BloodWallDisplay</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\BloodWallDisplay\BloodWallDisplayGameModeBase.cpp">
-      <Filter>Source\BloodWallDisplay</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\BloodWallDisplay\BloodWallDisplayGameModeBase.h">
-      <Filter>Source\BloodWallDisplay</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\BloodWallDisplay\UDPNetworkingWrapper.h">
-      <Filter>Source\BloodWallDisplay</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\BloodWallDisplay\UDPNetworkingWrapper.cpp">
-      <Filter>Source\BloodWallDisplay</Filter>
-    </ClCompile>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\BloodWallDisplay.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{29D780F4-B4F4-4A9B-8826-7A0FEA70D2D7}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\BloodWallDisplay.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\BloodWallDisplayEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{52A972D0-A153-40F6-A05C-0A60C6BA2ED7}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\BloodWallDisplay">
+			<UniqueIdentifier>{1C2FEE48-2898-4A22-B822-679EF597D3C9}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\BloodWallDisplay\BloodWallDisplay.Build.cs">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\BloodWallDisplay\BloodWallDisplay.cpp">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BloodWallDisplay\BloodWallDisplay.h">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\BloodWallDisplay\BloodWallDisplayGameModeBase.cpp">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BloodWallDisplay\BloodWallDisplayGameModeBase.h">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\BloodWallDisplay\SkeletonInputActor.cpp">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BloodWallDisplay\SkeletonInputActor.h">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\BloodWallDisplay\UDPNetworkingWrapper.cpp">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BloodWallDisplay\UDPNetworkingWrapper.h">
+			<Filter>Source\BloodWallDisplay</Filter>
+		</ClInclude >
+	</ItemGroup>
 </Project>

@@ -131,7 +131,8 @@ namespace Microsoft.Samples.Kinect.BodyBasics
         private string statusText = null;
 
         // UDP broadcasting
-        private UdpClient udpClient;
+        private UdpClient client;
+        private IPEndPoint ip;
 
         /// <summary>
         /// Initializes a new instance of the MainWindow class.
@@ -369,7 +370,7 @@ namespace Microsoft.Samples.Kinect.BodyBasics
                             this.DrawHand(body.HandLeftState, jointPoints[JointType.HandLeft], dc);
                             this.DrawHand(body.HandRightState, jointPoints[JointType.HandRight], dc);
 
-                            sendUDPBroadcast(jointPoints[JointType.HandLeft], jointPoints[JointType.HandRight]);
+                            sendUDPBroadcast(penIndex, body.HandLeftState, jointPoints[JointType.HandLeft], body.HandRightState, jointPoints[JointType.HandRight]);
                         }
                     }
 
@@ -528,22 +529,32 @@ namespace Microsoft.Samples.Kinect.BodyBasics
 
         private void setupUDPBroadcaster()
         {
-            udpClient = new UdpClient();
-
-            IPEndPoint ep = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 11000); // endpoint where server is listening
-            udpClient.Connect(ep);
+            client = new UdpClient();
+            ip = new IPEndPoint(IPAddress.Broadcast, 11000);
         }
 
         private void teardownUDPBroadcaster()
         {
-            udpClient.Close();
+            client.Close();
         }
 
-        private void sendUDPBroadcast(Point leftHandPos, Point rightHandPos)
+        private void sendUDPBroadcast(int bodyId, HandState leftHandState, Point leftHandPos, HandState rightHandState, Point rightHandPos)
         {
-            string dataString = string.Format("l:{0},{1};r:{2},{3}", leftHandPos.X, leftHandPos.Y, rightHandPos.X, rightHandPos.Y);
-            Byte[] buffer = Encoding.Unicode.GetBytes(dataString);
-            udpClient.Send(buffer, buffer.Length);
+            Point normalizedLeft = new Point(-1, -1);
+            if ( leftHandState == HandState.Open)
+            {
+                normalizedLeft = new Point(leftHandPos.X / this.displayWidth, leftHandPos.Y / this.displayHeight);
+            }
+
+            Point normalizedRight = new Point(-1, -1);
+            if (rightHandState == HandState.Open)
+            {
+                normalizedRight = new Point(rightHandPos.X / this.displayWidth, rightHandPos.Y / this.displayHeight);
+            }
+
+            string dataString = string.Format("{0},{1:0.##},{2:0.##},{3:0.##},{4:0.##}", bodyId, normalizedLeft.X, normalizedLeft.Y, normalizedRight.X, normalizedRight.Y);
+            byte[] bytes = Encoding.ASCII.GetBytes(dataString);
+            client.Send(bytes, bytes.Length, ip);
         }
     }
 }

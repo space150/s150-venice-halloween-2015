@@ -1,8 +1,8 @@
 {
 	"Changelist" : 0,
-	"BuildId" : "10dcaab6-dcb9-448d-8c06-2b88f18c1672",
+	"BuildId" : "4dda93d0-5734-424b-83cc-f6af6abc8c1a",
 	"Modules" : 
 	{
-		"BloodWallDisplay" : "UE4Editor-BloodWallDisplay.dll"
+		"BloodWallDisplay" : "UE4Editor-BloodWallDisplay-1311.dll"
 	}
 }

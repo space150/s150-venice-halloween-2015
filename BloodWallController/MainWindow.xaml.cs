@@ -552,7 +552,7 @@ namespace Microsoft.Samples.Kinect.BodyBasics
                 normalizedRight = new Point(rightHandPos.X / this.displayWidth, rightHandPos.Y / this.displayHeight);
             }
 
-            string dataString = string.Format("{0},{1:0.##},{2:0.##},{3:0.##},{4:0.##}", bodyId, normalizedLeft.X, normalizedLeft.Y, normalizedRight.X, normalizedRight.Y);
+            string dataString = string.Format("{0},{1:0.####},{2:0.####},{3:0.####},{4:0.####}", bodyId, normalizedLeft.X, normalizedLeft.Y, normalizedRight.X, normalizedRight.Y);
             byte[] bytes = Encoding.ASCII.GetBytes(dataString);
             client.Send(bytes, bytes.Length, ip);
         }

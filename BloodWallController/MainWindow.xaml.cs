@@ -20,6 +20,15 @@ namespace Microsoft.Samples.Kinect.BodyBasics
     using System.Net;
     using System.Net.Sockets;
 
+    public struct TrackedBodyData
+    {
+        public int id;
+        public HandState leftHandState;
+        public HandState rightHandState;
+        public Point leftHandPos;
+        public Point rightHandPos;
+    };
+
     /// <summary>
     /// Interaction logic for MainWindow
     /// </summary>
@@ -338,6 +347,7 @@ namespace Microsoft.Samples.Kinect.BodyBasics
                     dc.DrawRectangle(Brushes.Black, null, new Rect(0.0, 0.0, this.displayWidth, this.displayHeight));
 
                     int penIndex = 0;
+                    List<TrackedBodyData> trackedBodies = new List<TrackedBodyData>();
                     foreach (Body body in this.bodies)
                     {
                         Pen drawPen = this.bodyColors[penIndex++];
@@ -370,9 +380,23 @@ namespace Microsoft.Samples.Kinect.BodyBasics
                             this.DrawHand(body.HandLeftState, jointPoints[JointType.HandLeft], dc);
                             this.DrawHand(body.HandRightState, jointPoints[JointType.HandRight], dc);
 
-                            sendUDPBroadcast(penIndex, body.HandLeftState, jointPoints[JointType.HandLeft], body.HandRightState, jointPoints[JointType.HandRight]);
+                            TrackedBodyData d = new TrackedBodyData();
+                            d.id = penIndex;
+                            d.leftHandState = body.HandLeftState;
+                            d.leftHandPos = jointPoints[JointType.HandLeft];
+                            d.rightHandState = body.HandRightState;
+                            d.rightHandPos = jointPoints[JointType.HandRight];
+                            trackedBodies.Add(d);
                         }
                     }
+
+                    // we always have 2 bodies, even if they are blank
+                    if (trackedBodies.Count < 2 )
+                    {
+                        for (int i = 0; i < 2 - trackedBodies.Count; i++)
+                            trackedBodies.Add(new TrackedBodyData());
+                    }
+                    sendUDPBroadcast(trackedBodies);
 
                     // prevent drawing outside of our render area
                     this.drawingGroup.ClipGeometry = new RectangleGeometry(new Rect(0.0, 0.0, this.displayWidth, this.displayHeight));
@@ -538,22 +562,36 @@ namespace Microsoft.Samples.Kinect.BodyBasics
             client.Close();
         }
 
-        private void sendUDPBroadcast(int bodyId, HandState leftHandState, Point leftHandPos, HandState rightHandState, Point rightHandPos)
+        private void sendUDPBroadcast(List<TrackedBodyData> bodies)
         {
-            Point normalizedLeft = new Point(-1, -1);
-            if ( leftHandState == HandState.Open)
+            if (bodies.Count != 2) return;
+
+            List<string> entries = new List<string>();
+            for ( int i = 0; i < 2; i++ )
             {
-                normalizedLeft = new Point(leftHandPos.X / this.displayWidth, leftHandPos.Y / this.displayHeight);
+                int bodyId = bodies[i].id;
+                HandState leftHandState = bodies[i].leftHandState;
+                Point leftHandPos = bodies[i].leftHandPos;
+                HandState rightHandState = bodies[i].rightHandState;
+                Point rightHandPos = bodies[i].rightHandPos;
+
+                // int bodyId, HandState leftHandState, Point leftHandPos, HandState rightHandState, Point rightHandPos
+                Point normalizedLeft = new Point(-1, -1);
+                if (leftHandState == HandState.Open)
+                {
+                    normalizedLeft = new Point(leftHandPos.X / this.displayWidth, leftHandPos.Y / this.displayHeight);
+                }
+
+                Point normalizedRight = new Point(-1, -1);
+                if (rightHandState == HandState.Open)
+                {
+                    normalizedRight = new Point(rightHandPos.X / this.displayWidth, rightHandPos.Y / this.displayHeight);
+                }
+
+                entries.Add(string.Format("{0},{1:0.####},{2:0.####},{3:0.####},{4:0.####}", bodyId, normalizedLeft.X, normalizedLeft.Y, normalizedRight.X, normalizedRight.Y));
             }
 
-            Point normalizedRight = new Point(-1, -1);
-            if (rightHandState == HandState.Open)
-            {
-                normalizedRight = new Point(rightHandPos.X / this.displayWidth, rightHandPos.Y / this.displayHeight);
-            }
-
-            string dataString = string.Format("{0},{1:0.####},{2:0.####},{3:0.####},{4:0.####}", bodyId, normalizedLeft.X, normalizedLeft.Y, normalizedRight.X, normalizedRight.Y);
-            byte[] bytes = Encoding.ASCII.GetBytes(dataString);
+            byte[] bytes = Encoding.ASCII.GetBytes(string.Join(",", entries.ToArray()));
             client.Send(bytes, bytes.Length, ip);
         }
     }

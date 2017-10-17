@@ -5,34 +5,34 @@
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\MinidumpDiagnostics\MinidumpDiagnostics.Target.cs" />
 		<None Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\MinidumpDiagnostics\MinidumpDiagnostics.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{840F1C8A-757A-45FD-BB06-1C3BEE16B8B8}</UniqueIdentifier>
+			<UniqueIdentifier>{A5A566C9-BCA1-4088-8B51-1CBDBD226DA5}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\MinidumpDiagnostics\Private\MinidumpDiagnosticsApp.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
 		<Filter Include="Private\Mac">
-			<UniqueIdentifier>{BA615891-562D-4DB8-B174-9086949754F5}</UniqueIdentifier>
+			<UniqueIdentifier>{8FC70516-C6EF-4973-86A2-276193680938}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\MinidumpDiagnostics\Private\Mac\MinidumpDiagnosticsMainMac.cpp">
 			<Filter>Private\Mac</Filter>
 		</ClCompile >
 		<Filter Include="Private\Windows">
-			<UniqueIdentifier>{2AA5FA09-C503-4C67-BFE5-42D227A6ADC4}</UniqueIdentifier>
+			<UniqueIdentifier>{8B053A1B-28DF-4025-846C-DF4DBBCCF389}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\MinidumpDiagnostics\Private\Windows\MinidumpDiagnosticsMainWindows.cpp">
 			<Filter>Private\Windows</Filter>
 		</ClCompile >
 		<Filter Include="Public">
-			<UniqueIdentifier>{12F97441-A703-43A2-B470-2A824972B51A}</UniqueIdentifier>
+			<UniqueIdentifier>{ED9F9988-6B60-44D1-923C-AB06EFA23AC2}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\MinidumpDiagnostics\Public\MinidumpDiagnosticsApp.h">
 			<Filter>Public</Filter>
 		</ClInclude >
 		<Filter Include="Resources">
-			<UniqueIdentifier>{75E669B8-AB15-4DD3-9F51-6FE0E397EE50}</UniqueIdentifier>
+			<UniqueIdentifier>{51077B56-377F-4B85-B42D-64318B0023E7}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Resources\Windows">
-			<UniqueIdentifier>{125F7A80-3E18-4EEB-AEA7-078B0B1E1E8B}</UniqueIdentifier>
+			<UniqueIdentifier>{5A4E9228-EFC5-47ED-A26D-7D2554AA6F34}</UniqueIdentifier>
 		</Filter>
 		<Manifest Include="..\..\..\..\NvPhysX-UnrealEngine\Engine\Source\Programs\CrashReporter\MinidumpDiagnostics\Resources\Windows\Debug-PCLaunch-Win32.manifest">
 			<Filter>Resources\Windows</Filter>

@@ -600,13 +600,13 @@ namespace Microsoft.Samples.Kinect.BodyBasics
 
                 // int bodyId, HandState leftHandState, Point leftHandPos, HandState rightHandState, Point rightHandPos
                 Point normalizedLeft = new Point(-1, -1);
-                if (leftHandState == HandState.Open)
+                if (leftHandState != HandState.Unknown && leftHandState != HandState.NotTracked)
                 {
                     normalizedLeft = new Point(leftHandPos.X / this.displayWidth, leftHandPos.Y / this.displayHeight);
                 }
 
                 Point normalizedRight = new Point(-1, -1);
-                if (rightHandState == HandState.Open)
+                if (rightHandState != HandState.Unknown && rightHandState != HandState.NotTracked)
                 {
                     normalizedRight = new Point(rightHandPos.X / this.displayWidth, rightHandPos.Y / this.displayHeight);
                 }

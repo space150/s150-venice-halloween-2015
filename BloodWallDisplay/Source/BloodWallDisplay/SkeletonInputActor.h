@@ -24,6 +24,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FVector2D rightHand;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float leftRot;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float rightRot;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

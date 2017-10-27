@@ -26,7 +26,9 @@ namespace Microsoft.Samples.Kinect.BodyBasics
         public HandState leftHandState;
         public HandState rightHandState;
         public Point leftHandPos;
+        public double leftHandRot;
         public Point rightHandPos;
+        public double rightHandRot;
     };
 
     /// <summary>
@@ -384,8 +386,10 @@ namespace Microsoft.Samples.Kinect.BodyBasics
                             d.id = penIndex;
                             d.leftHandState = body.HandLeftState;
                             d.leftHandPos = jointPoints[JointType.HandLeft];
+                            d.leftHandRot = GetAngleDegree(jointPoints[JointType.HandLeft], jointPoints[JointType.HandTipLeft]);
                             d.rightHandState = body.HandRightState;
                             d.rightHandPos = jointPoints[JointType.HandRight];
+                            d.rightHandRot = GetAngleDegree(jointPoints[JointType.HandRight], jointPoints[JointType.HandTipRight]);
                             trackedBodies.Add(d);
                         }
                     }
@@ -588,11 +592,18 @@ namespace Microsoft.Samples.Kinect.BodyBasics
                     normalizedRight = new Point(rightHandPos.X / this.displayWidth, rightHandPos.Y / this.displayHeight);
                 }
 
-                entries.Add(string.Format("{0},{1:0.####},{2:0.####},{3:0.####},{4:0.####}", bodyId, normalizedLeft.X, normalizedLeft.Y, normalizedRight.X, normalizedRight.Y));
+                entries.Add(string.Format("{0},{1:0.####},{2:0.####},{3:0.####},{4:0.####},{5:0.####},{6:0.####}", bodyId, normalizedLeft.X, normalizedLeft.Y, normalizedRight.X, normalizedRight.Y, bodies[i].leftHandRot, bodies[i].rightHandRot));
             }
 
             byte[] bytes = Encoding.ASCII.GetBytes(string.Join(",", entries.ToArray()));
             client.Send(bytes, bytes.Length, ip);
+        }
+
+        public static double GetAngleDegree(Point origin, Point target)
+        {
+            //var n = 270 - (Math.Atan2(origin.Y - target.Y, origin.X - target.X)) * 180 / Math.PI;
+            var n = (Math.Atan2(origin.Y - target.Y, origin.X - target.X)) * 180 / Math.PI - 90;
+            return n % 360;
         }
     }
 }

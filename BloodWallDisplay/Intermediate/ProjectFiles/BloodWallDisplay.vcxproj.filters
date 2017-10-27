@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\BloodWallDisplay.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{4E3D7DFF-8AFE-467A-BF49-F7F4E144CD8D}</UniqueIdentifier>
+			<UniqueIdentifier>{8E4171D2-1DB0-42A1-88DE-CE9519DBAD52}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\BloodWallDisplay.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{1F8DB5B8-ED23-41EF-A762-A0F1A3AA64ED}</UniqueIdentifier>
+			<UniqueIdentifier>{04EA9F1E-B5A6-4BFE-BDCE-01ABA72475A1}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -25,7 +25,7 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\BloodWallDisplay">
-			<UniqueIdentifier>{8731139F-990E-497B-907E-1C4D7B9B72B0}</UniqueIdentifier>
+			<UniqueIdentifier>{5D12E1E0-CB7C-4E73-803A-631B1E9B1904}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\BloodWallDisplay\BloodWallDisplay.Build.cs">
 			<Filter>Source\BloodWallDisplay</Filter>

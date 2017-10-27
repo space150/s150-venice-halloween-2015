@@ -145,6 +145,8 @@ namespace Microsoft.Samples.Kinect.BodyBasics
         private UdpClient client;
         private IPEndPoint ip;
 
+        private List<KinectJointFilter> jointFilters;
+
         /// <summary>
         /// Initializes a new instance of the MainWindow class.
         /// </summary>
@@ -234,6 +236,15 @@ namespace Microsoft.Samples.Kinect.BodyBasics
 
             // initialize the components (controls) of the window
             this.InitializeComponent();
+
+            this.jointFilters = new List<KinectJointFilter>();
+            for ( int i = 0; i < 6; i++ )
+            {
+                KinectJointFilter jointFilter = new KinectJointFilter();
+                jointFilter.Init();
+
+                this.jointFilters.Add(jointFilter);
+            }
         }
 
         /// <summary>
@@ -350,12 +361,16 @@ namespace Microsoft.Samples.Kinect.BodyBasics
 
                     int penIndex = 0;
                     List<TrackedBodyData> trackedBodies = new List<TrackedBodyData>();
-                    foreach (Body body in this.bodies)
+                    //foreach (Body body in this.bodies)
+                    for (int b = 0; b < this.bodies.Length; b++)
                     {
+                        Body body = this.bodies[b];
                         Pen drawPen = this.bodyColors[penIndex++];
 
                         if (body.IsTracked)
                         {
+                            this.jointFilters[b].UpdateFilter(body);
+
                             this.DrawClippedEdges(body, dc);
 
                             IReadOnlyDictionary<JointType, Joint> joints = body.Joints;
@@ -383,13 +398,17 @@ namespace Microsoft.Samples.Kinect.BodyBasics
                             this.DrawHand(body.HandRightState, jointPoints[JointType.HandRight], dc);
 
                             TrackedBodyData d = new TrackedBodyData();
+
                             d.id = penIndex;
+
                             d.leftHandState = body.HandLeftState;
-                            d.leftHandPos = jointPoints[JointType.HandLeft];
-                            d.leftHandRot = GetAngleDegree(jointPoints[JointType.HandLeft], jointPoints[JointType.HandTipLeft]);
+                            d.leftHandPos = CameraSpaceToWindowsPoint(this.jointFilters[b].GetFilteredJoint((int)JointType.HandLeft));
+                            d.leftHandRot = GetAngleDegree(d.leftHandPos, CameraSpaceToWindowsPoint(this.jointFilters[b].GetFilteredJoint((int)JointType.HandTipLeft)));
+
                             d.rightHandState = body.HandRightState;
-                            d.rightHandPos = jointPoints[JointType.HandRight];
-                            d.rightHandRot = GetAngleDegree(jointPoints[JointType.HandRight], jointPoints[JointType.HandTipRight]);
+                            d.rightHandPos = CameraSpaceToWindowsPoint(this.jointFilters[b].GetFilteredJoint((int)JointType.HandRight));
+                            d.rightHandRot = GetAngleDegree(d.rightHandPos, CameraSpaceToWindowsPoint(this.jointFilters[b].GetFilteredJoint((int)JointType.HandTipRight)));
+
                             trackedBodies.Add(d);
                         }
                     }
@@ -604,6 +623,12 @@ namespace Microsoft.Samples.Kinect.BodyBasics
             //var n = 270 - (Math.Atan2(origin.Y - target.Y, origin.X - target.X)) * 180 / Math.PI;
             var n = (Math.Atan2(origin.Y - target.Y, origin.X - target.X)) * 180 / Math.PI - 90;
             return n % 360;
+        }
+
+        private Point CameraSpaceToWindowsPoint(CameraSpacePoint p)
+        {
+            DepthSpacePoint depthSpacePoint = this.coordinateMapper.MapCameraPointToDepthSpace(p);
+            return new Point(depthSpacePoint.X, depthSpacePoint.Y);
         }
     }
 }

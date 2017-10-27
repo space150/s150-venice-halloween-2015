@@ -311,4 +311,5 @@ Intermediate/*
 # Cache files for the editor to use
 DerivedDataCache/*
 
+BloodWallDisplay/Saved/Cooked/
 BloodWallDisplay/Saved/StagedBuilds/
